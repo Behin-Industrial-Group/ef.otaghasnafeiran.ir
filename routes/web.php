@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use Spatie\SimpleExcel\SimpleExcelReader;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/import-user', function () {
+    $rows = SimpleExcelReader::create(public_path('Book1.xlsx'))->getRows();
+    echo "<pre>";
+    $rows->each(function(array $rowProperties){
+        if($rowProperties['همراه']){
+            print_r($rowProperties);
+
+        }
+    });
+});
+
 Route::get('/build-app', function () {
     Artisan::call('migrate');
 });
@@ -21,6 +33,7 @@ Route::get('/build-app', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
