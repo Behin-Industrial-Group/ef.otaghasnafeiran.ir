@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('lname')->after('name')->nullable();
             $table->string('mobile', 11)->after('email')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
+            $table->unsignedBigInteger('parent_id')->nullable();
+
+            $table->foreign('city_id')->references('id')->on('cities');
+            $table->foreign('parent_id')->references('id')->on('users');
         });
     }
 
