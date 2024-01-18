@@ -24,30 +24,30 @@ Route::get('/import-user', function () {
     echo "<pre>";
     $rows->each(function(array $rowProperties){
         if($rowProperties['همراه']){
-            print_r($rowProperties);
-            $province = $rowProperties['استان'];
-            $city = $rowProperties['شهرستان'];
-            $name = "اتاق اصناف شهرستان ". $city;
-            $username = $rowProperties['همراه'];
-            $password = $username;
+            // print_r($rowProperties);
+            // $province = $rowProperties['استان'];
+            // $city = $rowProperties['شهرستان'];
+            // $name = "اتاق اصناف شهرستان ". $city;
+            // $username = $rowProperties['همراه'];
+            // $password = $username;
             
-            $city_id = CityController::create($province, $city)->id;
+            // $city_id = CityController::create($province, $city)->id;
 
-            $user = User::create([
-                'name' => $name,
-                'email' => "$username",
-                'password' => Hash::make($password),
-                'city_id' => $city_id
-            ]);
+            // $user = User::create([
+            //     'name' => $name,
+            //     'email' => "$username",
+            //     'password' => Hash::make($password),
+            //     'city_id' => $city_id
+            // ]);
 
-            UserInfo::create([
-                'user_id' => $user->id,
-                'fname' => $rowProperties['نام'],
-                'lname' => $rowProperties['نام خانوادگی'],
-                'mobile' => "$username",
-                'phone' => $rowProperties['تلفن ثابت'],
-                'address' => $rowProperties['آدرس'],
-            ]);
+            // UserInfo::create([
+            //     'user_id' => $user->id,
+            //     'fname' => $rowProperties['نام'],
+            //     'lname' => $rowProperties['نام خانوادگی'],
+            //     'mobile' => "$username",
+            //     'phone' => $rowProperties['تلفن ثابت'],
+            //     'address' => $rowProperties['آدرس'],
+            // ]);
         }
     });
 });
