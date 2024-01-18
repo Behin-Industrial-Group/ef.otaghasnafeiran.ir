@@ -35,7 +35,7 @@ Route::get('/import-user', function () {
 
             $user = User::create([
                 'name' => $name,
-                'email' => $username,
+                'email' => "$username",
                 'password' => Hash::make($password),
                 'city_id' => $city_id
             ]);
