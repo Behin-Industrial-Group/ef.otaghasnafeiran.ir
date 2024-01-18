@@ -59,7 +59,7 @@
                 $('#login-form').serialize(),
                 function(response) {
                     show_message("به صفحه داشبورد منتقل میشوید")
-                    window.location = "{{ url('admin') }}"
+                    window.location = "{{ url('dashboard') }}"
                 },
                 function(response) {
                     // console.log(response);

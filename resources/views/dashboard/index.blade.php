@@ -16,29 +16,29 @@
                     </div>
 
 
-                    <form>
+                    <form action="javascript:void(0)" id="form">
                         <div class="card-body">
                             <fieldset class="row col-sm-12">
                                 <legend>مجری</legend>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputEmail1">نام مجری: </label>
                                     <input type="text" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Enter email">
+                                        placeholder="نام مجری">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputPassword1">نام خانوادگی مجری: </label>
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Password">
+                                        placeholder="نام خانوادگی مجری">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputPassword1">کدملی مجری: </label>
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Password">
+                                        placeholder="کدملی مجری">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputPassword1">تلفن همراه مجری: </label>
                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                        placeholder="Password">
+                                        placeholder="تلفن همراه مجری">
                                 </div>
                             </fieldset>
 
@@ -134,13 +134,10 @@
                         </div>
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">ثبت</button>
                         </div>
                     </form>
                 </div>
-                <form action="javascript:void(0)" id="form" class="form-control">
-
-                </form>
             </div>
         </div>
     </div>
