@@ -44,7 +44,7 @@ Route::get('/import-user', function () {
                 'user_id' => $user->id,
                 'fname' => $rowProperties['نام'],
                 'lname' => $rowProperties['نام خانوادگی'],
-                'mobile' => $rowProperties['همراه'],
+                'mobile' => "$username",
                 'phone' => $rowProperties['تلفن ثابت'],
                 'address' => $rowProperties['آدرس'],
             ]);
