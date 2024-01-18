@@ -53,7 +53,7 @@
 
 
     <footer class="main-footer" style="margin: 0">
-        <strong> &copy; {{date('Y')}} - تمامی حقوق محفوظ است - <a href="https://ef.otaghasnafeiran.ir">معاونت اقتصادی و کسب و کار اتاق اصناف ایران</a></strong>
+        <strong> &copy; {{date('Y')}} - حقوق محفوظ شده - <a href="https://ef.otaghasnafeiran.ir">معاونت کسب و کار اتاق اصناف ایران</a></strong>
     </footer>
 
 

@@ -122,6 +122,7 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         array (
             'Monolog\\' => 8,
             'Mockery\\' => 8,
+            'Mkhodroo\\UserRoles\\' => 19,
             'Mkhodroo\\Cities\\' => 16,
         ),
         'L' => 
@@ -408,6 +409,10 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         array (
             0 => __DIR__ . '/..' . '/mockery/mockery/library/Mockery',
         ),
+        'Mkhodroo\\UserRoles\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src',
+        ),
         'Mkhodroo\\Cities\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src',
@@ -565,6 +570,7 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfileController.php',
+        'App\\Http\\Controllers\\UserInfoController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserInfoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -578,6 +584,7 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\UserInfo' => __DIR__ . '/../..' . '/app/Models/UserInfo.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -3266,6 +3273,14 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'Mkhodroo\\Cities\\CityProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/CityProvider.php',
         'Mkhodroo\\Cities\\Controllers\\CityController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/CityController.php',
         'Mkhodroo\\Cities\\Models\\City' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Models/City.php',
+        'Mkhodroo\\UserRoles\\Controllers\\AccessController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/AccessController.php',
+        'Mkhodroo\\UserRoles\\Controllers\\GetMethodsController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetMethodsController.php',
+        'Mkhodroo\\UserRoles\\Controllers\\GetRoleController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetRoleController.php',
+        'Mkhodroo\\UserRoles\\Middlewares\\Access' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Middlewares/Access.php',
+        'Mkhodroo\\UserRoles\\Models\\Access' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Access.php',
+        'Mkhodroo\\UserRoles\\Models\\Method' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Method.php',
+        'Mkhodroo\\UserRoles\\Models\\Role' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Role.php',
+        'Mkhodroo\\UserRoles\\UserRolesServiceProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/UserRolesServiceProvider.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
         'Mockery\\Adapter\\Phpunit\\MockeryTestCase' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCase.php',

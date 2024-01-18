@@ -164,6 +164,7 @@ return [
          * Application Service Providers...
          */
         Mkhodroo\Cities\CityProvider::class,
+        \Mkhodroo\UserRoles\UserRolesServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

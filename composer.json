@@ -27,7 +27,8 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/"
+            "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/",
+            "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src/"
         }
     },
     "autoload-dev": {

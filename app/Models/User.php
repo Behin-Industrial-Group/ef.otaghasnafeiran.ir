@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Mkhodroo\UserRoles\Controllers\AccessController;
 
 class User extends Authenticatable
 {
@@ -22,7 +23,8 @@ class User extends Authenticatable
         'email',
         'password',
         'city_id', 
-        'parent_id'
+        'parent_id',
+        'role_id'
     ];
 
     /**
@@ -44,4 +46,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    function access($method_name) {
+        return (new AccessController($method_name))->check();
+    }
 }
