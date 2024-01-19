@@ -164,7 +164,8 @@
                             </div>
 
                             <fieldset class="row col-sm-12">
-                                <legend>مجری</legend>
+                                <legend>مجری <button class="btn btn-default">دانلود نمونه قرارداد با مجری</button></legend>
+                                
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputEmail1">نام مجری: </label>
                                     <input type="text" name="performancer_name" class="form-control" id="exampleInputEmail1"
