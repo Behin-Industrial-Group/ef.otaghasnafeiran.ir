@@ -113,7 +113,7 @@
             $(".persian-date").persianDatepicker({
                 viewMode: 'year',
                 format: 'YYYY-MM-DD',
-                initialValueType: 'gregorian',
+                initialValueType: 'persian',
                 calendar: {
                     persian: {
                         locale: 'en'

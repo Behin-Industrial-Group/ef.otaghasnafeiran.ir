@@ -18,6 +18,7 @@ Route::name('namayeshgah.')->prefix('namayeshgah')->middleware(['auth'])->group(
         Route::get('edit/{id}', [NamayeshgahController::class, 'editForm'])->name('edit');
     });
 
+    Route::get('get/{id}', [NamayeshgahController::class, 'getById'])->name('getById');
     Route::get('get-mine', [NamayeshgahController::class, 'getMine'])->name('getMine');
     Route::post('add', [NamayeshgahController::class, 'add'])->name('add');
 

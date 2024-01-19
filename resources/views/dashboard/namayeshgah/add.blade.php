@@ -17,6 +17,9 @@
 
 
                     <form action="javascript:void(0)" id="form">
+                        @isset($id)
+                            <input type="hidden" name="id" id="" value="{{ $id }}">
+                        @endisset
                         <div class="card-body">
                             <div class="form-group col-sm-4">
                                 <label for="exampleInputPassword1">شماره تماس روابط عمومی نمایشگاه:</label>
@@ -25,16 +28,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">آدرس دقیق محل برگزاری نمایشگاه:</label>
-                                <input type="text" name="address" class="form-control" id="exampleInputPassword1"
+                                <input type="text" name="address" class="form-control"
+                                    id="exampleInputPassword1"
                                     placeholder="آدرس محل برگزاری نمایشگاه">
                             </div>
                             <div class="form-group col-sm-12">
                                 <label for="exampleInputPassword1">زمان برگزاری نمایشگاه</label>
                                 <div class="row col-sm-12">
-                                    از:<input type="text" name="start_date" class="form-control col-sm-4 persian-date"
-                                        id="exampleInputPassword1">
-                                    تا:<input type="text" name="end_date" class="form-control col-sm-4 persian-date"
-                                        id="exampleInputPassword1">
+                                    از:<input type="text" name="start_date"
+                                        class="form-control col-sm-4 persian-date" id="exampleInputPassword1">
+                                    تا:<input type="text" name="end_date"
+                                        class="form-control col-sm-4 persian-date" id="exampleInputPassword1">
                                 </div>
 
                             </div>
@@ -45,61 +49,61 @@
                                 <fieldset>
                                     <legend>درجه 1</legend>
                                     <div class="form-group">
-                                        <input type="text" name="number_of_booth1" class="form-control" id="exampleInputEmail1"
-                                            placeholder="تعداد">
+                                        <input type="text" name="number_of_booth1" class="form-control"
+                                            id="exampleInputEmail1" placeholder="تعداد">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="meterage_of_booth1" class="form-control" id="exampleInputEmail1"
-                                            placeholder="متراژ غرفه">
+                                        <input type="text" name="meterage_of_booth1" class="form-control"
+                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="price_of_booth1_per_meter" class="form-control" id="exampleInputEmail1"
-                                            placeholder="قیمت به ازای هر متر مربع">
+                                        <input type="text" name="price_of_booth1_per_meter" class="form-control"
+                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
                                     </div>
                                 </fieldset>
                                 <fieldset>
                                     <legend>درجه 2</legend>
                                     <div class="form-group">
-                                        <input type="text" name="number_of_booth2" class="form-control" id="exampleInputEmail1"
-                                            placeholder="تعداد">
+                                        <input type="text" name="number_of_booth2" class="form-control"
+                                            id="exampleInputEmail1" placeholder="تعداد">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="meterage_of_booth2" class="form-control" id="exampleInputEmail1"
-                                            placeholder="متراژ غرفه">
+                                        <input type="text" name="meterage_of_booth2" class="form-control"
+                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="price_of_booth2_per_meter" class="form-control" id="exampleInputEmail1"
-                                            placeholder="قیمت به ازای هر متر مربع">
+                                        <input type="text" name="price_of_booth2_per_meter" class="form-control"
+                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
                                     </div>
                                 </fieldset>
                                 <fieldset>
                                     <legend>درجه 3</legend>
                                     <div class="form-group">
-                                        <input type="text" name="number_of_booth3" class="form-control" id="exampleInputEmail1"
-                                            placeholder="تعداد">
+                                        <input type="text" name="number_of_booth3" class="form-control"
+                                            id="exampleInputEmail1" placeholder="تعداد">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="meterage_of_booth3" class="form-control" id="exampleInputEmail1"
-                                            placeholder="متراژ غرفه">
+                                        <input type="text" name="meterage_of_booth3" class="form-control"
+                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="price_of_booth3_per_meter" class="form-control" id="exampleInputEmail1"
-                                            placeholder="قیمت به ازای هر متر مربع">
+                                        <input type="text" name="price_of_booth3_per_meter" class="form-control"
+                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
                                     </div>
                                 </fieldset>
                                 <fieldset>
                                     <legend>درجه 4</legend>
                                     <div class="form-group">
-                                        <input type="text" name="number_of_booth4" class="form-control" id="exampleInputEmail1"
-                                            placeholder="تعداد">
+                                        <input type="text" name="number_of_booth4" class="form-control"
+                                            id="exampleInputEmail1" placeholder="تعداد">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="meterage_of_booth4" class="form-control" id="exampleInputEmail1"
-                                            placeholder="متراژ غرفه">
+                                        <input type="text" name="meterage_of_booth4" class="form-control"
+                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="price_of_booth4_per_meter" class="form-control" id="exampleInputEmail1"
-                                            placeholder="قیمت به ازای هر متر مربع">
+                                        <input type="text" name="price_of_booth4_per_meter" class="form-control"
+                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
                                     </div>
                                 </fieldset>
                             </fieldset>
@@ -108,7 +112,8 @@
                                 <label for="exampleInputFile">فایل اکسل قیمت کالا و خدمات</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="price_file" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="price_file" class="custom-file-input"
+                                            id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                     </div>
                                 </div>
@@ -118,7 +123,8 @@
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی شرایط مکانی نمایشگاه</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="place_checklist_file" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="place_checklist_file" class="custom-file-input"
+                                            id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                     </div>
                                     <div class="input-group-append">
@@ -134,7 +140,8 @@
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی غرفه در زمان فروش در نمایشگاه</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="booth_checklist_file" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="booth_checklist_file" class="custom-file-input"
+                                            id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                     </div>
                                     <div class="input-group-append">
@@ -151,7 +158,8 @@
                                     نمایشگاه</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="performance_checklist_file" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="performance_checklist_file" class="custom-file-input"
+                                            id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                     </div>
                                     <div class="input-group-append">
@@ -165,33 +173,33 @@
 
                             <fieldset class="row col-sm-12">
                                 <legend>مجری <button class="btn btn-default">دانلود نمونه قرارداد با مجری</button></legend>
-                                
+
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputEmail1">نام مجری: </label>
-                                    <input type="text" name="performancer_name" class="form-control" id="exampleInputEmail1"
-                                        placeholder="نام مجری">
+                                    <input type="text" name="performancer_name" class="form-control"
+                                        id="exampleInputEmail1" placeholder="نام مجری">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputPassword1">نام خانوادگی مجری: </label>
-                                    <input type="text" name="performancer_lname" class="form-control" id="exampleInputPassword1"
-                                        placeholder="نام خانوادگی مجری">
+                                    <input type="text" name="performancer_lname" class="form-control"
+                                        id="exampleInputPassword1" placeholder="نام خانوادگی مجری">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputPassword1">کدملی مجری: </label>
-                                    <input type="text" name="performancer_nid" class="form-control" id="exampleInputPassword1"
-                                        placeholder="کدملی مجری">
+                                    <input type="text" name="performancer_nid" class="form-control"
+                                        id="exampleInputPassword1" placeholder="کدملی مجری">
                                 </div>
                                 <div class="form-group col-sm-3">
                                     <label for="exampleInputPassword1">تلفن همراه مجری: </label>
-                                    <input type="text" name="performancer_mobile" class="form-control" id="exampleInputPassword1"
-                                        placeholder="تلفن همراه مجری">
+                                    <input type="text" name="performancer_mobile" class="form-control"
+                                        id="exampleInputPassword1" placeholder="تلفن همراه مجری">
                                 </div>
                             </fieldset>
 
 
                         </div>
 
-                        
+
                     </form>
                     <div class="card-footer">
                         <button class="btn btn-primary" onclick="submit()">ثبت</button>
@@ -205,6 +213,17 @@
 @section('script')
     <script>
         initial_view()
+        url = "{{ route('namayeshgah.getById', ['id', 'id']) }}";
+        url = url.replace('id', "{{ $id }}");
+        send_ajax_get_request(
+            url,
+            function(res) {
+                console.log(res);
+                $('input[type="text"]').each(function(item) {
+                    $(this).val(res[$(this).attr('name')]);
+                })
+            }
+        )
 
         function submit() {
             var form = $('#form')[0];
@@ -212,8 +231,8 @@
             send_ajax_formdata_request(
                 "{{ route('namayeshgah.add') }}",
                 fd,
-                function(res){
-                    console.log(res);
+                function(res) {
+                    show_message("اطلاعات با موفقیت ثبت شد")
                 }
             )
         }
