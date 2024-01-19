@@ -14,6 +14,7 @@
                             درگاه ثبت نام نمایشگاه های عرضه مستقیم کالا عید تا عید
                         </h3>
                     </div>
+                    <div id="namayeshgah"></div>
 
                     <div class="card-body">
                         <button class="btn btn-info" onclick="go_to_add_form()">افزودن نمایشگاه</button>
@@ -28,6 +29,18 @@
 @section('script')
     <script>
         initial_view()
+        get_mine()
+        function get_mine(){
+            send_ajax_get_request(
+                "{{route('namayeshgah.getMine')}}",
+                function(res){
+                    console.log(res);
+                    res.forEach(function(item){
+
+                    })
+                }
+            )
+        }
         function go_to_add_form(){
             alert(0)
             window.location.replace("{{ route('namayeshgah.form.add') }}");
