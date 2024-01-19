@@ -48,15 +48,14 @@
 </head>
 
 <body class="login-page">
-    <div class="row" style="height: 210px">
+    <div class="row banner-div" style="">
         <img src="public/eid.jpg" class="banner" alt="" >
-
     </div>
     @yield('content')
 
 
 
-    <footer class="main-footer text-center " style="margin: 0;position: absolute; width:100%; bottom: 0">
+    <footer class="main-footer text-center " style="margin: 0;position: fixed; width:100%; bottom: 0">
         <strong> &copy; {{date('Y')}} - حقوق محفوظ شده - <a href="https://ef.otaghasnafeiran.ir">معاونت کسب و کار اتاق اصناف ایران</a></strong>
     </footer>
 
