@@ -213,6 +213,7 @@
 @section('script')
     <script>
         initial_view()
+        @isset($id)
         url = "{{ route('namayeshgah.getById', ['id', 'id']) }}";
         url = url.replace('id', "{{ $id }}");
         send_ajax_get_request(
@@ -224,6 +225,8 @@
                 })
             }
         )
+        @endisset
+        
 
         function submit() {
             var form = $('#form')[0];
