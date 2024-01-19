@@ -48,7 +48,7 @@
 </head>
 
 <body class="login-page">
-    <div class="row banner-div" style="">
+    <div class="banner-div" style="">
         <img src="public/eid.jpg" class="banner" alt="" >
     </div>
     @yield('content')
