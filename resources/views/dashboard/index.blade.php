@@ -35,14 +35,14 @@
                 "{{route('namayeshgah.getMine')}}",
                 function(res){
                     console.log(res);
+                    var n = $('#namayeshgah')
                     res.forEach(function(item){
-
+                        n.append(`<button class='btn btn-danger'></button>`)
                     })
                 }
             )
         }
         function go_to_add_form(){
-            alert(0)
             window.location.replace("{{ route('namayeshgah.form.add') }}");
         }
     </script>
