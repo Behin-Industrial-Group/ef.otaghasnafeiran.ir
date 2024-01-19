@@ -16,9 +16,15 @@
                     </div>
 
                     <div class="card-body">
-                        <div id="namayeshgah"></div>
+                        <div id="namayeshgah">
+                            <button class="btn btn-primary" onclick="go_to_add_form()">افزودن نمایشگاه</button>
+                        </div>
+                        <div class="row">
+                            <img src="public/eid.jpg" class="row" alt="" width="100%">
+                        </div>
+                        
 
-                        <button class="btn btn-info" onclick="go_to_add_form()">افزودن نمایشگاه</button>
+                        
                     </div>
                     
                 </div>

@@ -214,7 +214,7 @@ legend {
     position: absolute;
     width: 100%;
   }
-  .card{
+  .register-box .card{
     position: absolute;
     left: 7%;
     width: 400px;
