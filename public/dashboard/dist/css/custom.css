@@ -209,8 +209,7 @@ legend {
 }
 
 @media (max-width: 2000px){
-  .banner-div{
-  }
+  
   .banner{
     position: absolute;
     width: 100%;
