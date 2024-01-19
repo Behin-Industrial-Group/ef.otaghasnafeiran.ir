@@ -187,3 +187,12 @@ legend {
   float: left;
 }
 
+@media (max-width: 500px){
+  .banner{
+    position: absolute;
+    width: 100%;
+  }
+  .register-box{
+    width:  80%;
+  }
+}

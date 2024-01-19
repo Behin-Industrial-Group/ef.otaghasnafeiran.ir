@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class NamayeshgahController extends Controller
 {
     public function getMine(){
-        return Namayeshgah::where('user_id', Auth::id())->select('start_date', 'end_date')->get();
+        return Namayeshgah::where('user_id', Auth::id())->select('id','start_date', 'end_date')->get();
     }
     public function addForm(){
         return view('dashboard.namayeshgah.add');
@@ -25,5 +25,9 @@ class NamayeshgahController extends Controller
 
         $n = Namayeshgah::create($data);
         return $n;
+    }
+
+    public function editForm($id){
+        return view('dashboard.namayeshgah.add');
     }
 }

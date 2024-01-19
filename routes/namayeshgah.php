@@ -15,6 +15,7 @@ use Spatie\SimpleExcel\SimpleExcelReader;
 Route::name('namayeshgah.')->prefix('namayeshgah')->middleware(['auth'])->group(function () {
     Route::name('form.')->prefix('form')->group(function () {
         Route::get('add', [NamayeshgahController::class, 'addForm'])->name('add');
+        Route::get('edit/{id}', [NamayeshgahController::class, 'editForm'])->name('edit');
     });
 
     Route::get('get-mine', [NamayeshgahController::class, 'getMine'])->name('getMine');
