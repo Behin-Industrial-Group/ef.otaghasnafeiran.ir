@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row m-3">
-        <div class="card col-sm-12 p-3">
+    <div class="row">
+        <div class="col-sm-12">
             <div class="header text-center ">
                 <h3>
                 </h3>
