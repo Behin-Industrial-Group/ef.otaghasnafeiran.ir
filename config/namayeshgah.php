@@ -6,5 +6,8 @@ return [
         'spring' => 'بهاره',
         'autumn' => 'پاییزه',
         'seasonal' => 'فصلی',
+    ],
+    'checklist_types' => [
+        ''
     ]
 ];
