@@ -20,7 +20,7 @@
                             <button class="btn btn-primary" onclick="go_to_add_form()">افزودن نمایشگاه</button>
                         </div>
                         <div class="row">
-                            <img src="public/eid.jpg" class="row" alt="" width="100%">
+                            <img src="public/eid.jpg?{{config('app.version')}}" class="row" alt="" width="100%">
                         </div>
                         
 

@@ -38,6 +38,22 @@
     <script src="{{ url('public/js/ajax.js') . '?' . config('app.version') }}"></script>
     <script src="{{ url('public/js/dataTable.js') . '?' . config('app.version') }}"></script>
     <script src="{{ url('public/js/dropzone.js') . '?' . config('app.version') }}"></script>
+    <script>
+        clear_cache()
+        function clear_cache(){
+            var ver = "{{config('app.version')}}";
+            console.log('APP VERSION: ' + ver);
+            $('script').each(function(item){
+                $(this).attr('src', $(this).attr('src')+ '?' + ver)
+            })
+            $('img').each(function(item){
+                $(this).attr('src', $(this).attr('src')+ '?' + ver)
+            })
+            $('link').each(function(item){
+                $(this).attr('href', $(this).attr('href')+ '?' + ver)
+            })
+        }
+    </script>
 
 </head>
 
@@ -107,20 +123,7 @@
         //     initial_view();
         //     hide_loading();
         // });
-        clear_cache()
-        function clear_cache(){
-            var ver = "{{config('app.version')}}";
-            console.log('APP VERSION: ' + ver);
-            $('script').each(function(item){
-                $(this).attr('src', $(this).attr('src')+ '?' + ver)
-            })
-            $('img').each(function(item){
-                $(this).attr('src', $(this).attr('src')+ '?' + ver)
-            })
-            $('link').each(function(item){
-                $(this).attr('href', $(this).attr('href')+ '?' + ver)
-            })
-        }
+        
 
         function initial_view() {
             $('.select2').select2();
