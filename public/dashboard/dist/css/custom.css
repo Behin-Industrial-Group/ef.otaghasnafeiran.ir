@@ -187,7 +187,7 @@ legend {
   float: left;
 }
 
-.login-page, .content{
+.login-page, .content, .content-wrapper{
   background-color: white;
 }
 
