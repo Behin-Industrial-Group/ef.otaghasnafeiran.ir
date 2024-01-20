@@ -107,6 +107,20 @@
         //     initial_view();
         //     hide_loading();
         // });
+        clear_cache()
+        function clear_cache(){
+            var ver = "{{config('app.version')}}";
+            console.log('APP VERSION: ' + ver);
+            $('script').each(function(item){
+                $(this).attr('src', $(this).attr('src')+ '?' + ver)
+            })
+            $('img').each(function(item){
+                $(this).attr('src', $(this).attr('src')+ '?' + ver)
+            })
+            $('link').each(function(item){
+                $(this).attr('href', $(this).attr('href')+ '?' + ver)
+            })
+        }
 
         function initial_view() {
             $('.select2').select2();
