@@ -28,17 +28,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">آدرس دقیق محل برگزاری نمایشگاه:</label>
-                                <input type="text" name="address" class="form-control"
-                                    id="exampleInputPassword1"
+                                <input type="text" name="address" class="form-control" id="exampleInputPassword1"
                                     placeholder="آدرس محل برگزاری نمایشگاه">
                             </div>
                             <div class="form-group col-sm-12">
                                 <label for="exampleInputPassword1">زمان برگزاری نمایشگاه</label>
                                 <div class="row col-sm-12">
-                                    از:<input type="text" name="start_date"
-                                        class="form-control col-sm-4 persian-date" id="exampleInputPassword1">
-                                    تا:<input type="text" name="end_date"
-                                        class="form-control col-sm-4 persian-date" id="exampleInputPassword1">
+                                    از:<input type="text" name="start_date" class="form-control col-sm-4 persian-date"
+                                        id="exampleInputPassword1">
+                                    تا:<input type="text" name="end_date" class="form-control col-sm-4 persian-date"
+                                        id="exampleInputPassword1">
                                 </div>
 
                             </div>
@@ -112,9 +111,17 @@
                                 <label for="exampleInputFile">فایل اکسل قیمت کالا و خدمات</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="price_file" class="custom-file-input"
-                                            id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @isset($data['price_file'])
+                                            <button class="btn btn-default">
+                                                <a href="{{ $data['price_file'] }}" target="_blank">دانلود</a>
+                                            </button>
+                                            <button class="fa fa-trash btn btn-danger"
+                                                onclick="delete_file({{ $data['id'] }}, 'price_file')"></button>
+                                        @else
+                                            <input type="file" name="price_file" class="custom-file-input"
+                                                id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @endisset
                                     </div>
                                 </div>
                             </div>
@@ -123,14 +130,22 @@
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی شرایط مکانی نمایشگاه</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="place_checklist_file" class="custom-file-input"
-                                            id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @isset($data['place_checklist_file'])
+                                            <button class="btn btn-default">
+                                                <a href="{{ $data['place_checklist_file'] }}" target="_blank">دانلود</a>
+                                            </button>
+                                            <button class="fa fa-trash btn btn-danger"
+                                                onclick="delete_file({{ $data['id'] }}, 'place_checklist_file')"></button>
+                                        @else
+                                            <input type="file" name="place_checklist_file" class="custom-file-input"
+                                                id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @endisset
                                     </div>
                                     <div class="input-group-append">
                                         <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست تایید شرایط مکانی.pdf']) }}"
                                             target="_blank" class="input-group-text">
-                                            دانلود چک لیست
+                                            نمونه
                                         </a>
                                     </div>
                                 </div>
@@ -140,14 +155,22 @@
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی غرفه در زمان فروش در نمایشگاه</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="booth_checklist_file" class="custom-file-input"
-                                            id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @isset($data['booth_checklist_file'])
+                                            <button class="btn btn-default">
+                                                <a href="{{ $data['booth_checklist_file'] }}" target="_blank">دانلود</a>
+                                            </button>
+                                            <button class="fa fa-trash btn btn-danger"
+                                                onclick="delete_file({{ $data['id'] }}, 'booth_checklist_file')"></button>
+                                        @else
+                                            <input type="file" name="booth_checklist_file" class="custom-file-input"
+                                                id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @endisset
                                     </div>
                                     <div class="input-group-append">
                                         <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست ارزیابی غرفه در زمان فروش در نمایشگاه.pdf']) }}"
                                             target="_blank" class="input-group-text">
-                                            دانلود چک لیست
+                                            نمونه
                                         </a>
                                     </div>
                                 </div>
@@ -158,14 +181,22 @@
                                     نمایشگاه</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="performance_checklist_file" class="custom-file-input"
-                                            id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @isset($data['performance_checklist_file'])
+                                            <button class="btn btn-default">
+                                                <a href="{{ $data['performance_checklist_file'] }}" target="_blank">دانلود</a>
+                                            </button>
+                                            <button class="fa fa-trash btn btn-danger"
+                                                onclick="delete_file({{ $data['id'] }}, 'performance_checklist_file')"></button>
+                                        @else
+                                            <input type="file" name="performance_checklist_file" class="custom-file-input"
+                                                id="exampleInputFile">
+                                            <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                                        @endisset
                                     </div>
                                     <div class="input-group-append">
                                         <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست ارزیابی مجری برگزاری نمایشگاه در زمان برگزاری نمایشگاه.pdf']) }}"
                                             target="_blank" class="input-group-text">
-                                            دانلود چک لیست
+                                            نمونه
                                         </a>
                                     </div>
                                 </div>
@@ -214,19 +245,19 @@
     <script>
         initial_view()
         @isset($id)
-        url = "{{ route('namayeshgah.getById', ['id', 'id']) }}";
-        url = url.replace('id', "{{ $id }}");
-        send_ajax_get_request(
-            url,
-            function(res) {
-                console.log(res);
-                $('input[type="text"]').each(function(item) {
-                    $(this).val(res[$(this).attr('name')]);
-                })
-            }
-        )
+            url = "{{ route('namayeshgah.getById', ['id', 'id']) }}";
+            url = url.replace('id', "{{ $id }}");
+            send_ajax_get_request(
+                url,
+                function(res) {
+                    console.log(res);
+                    $('input[type="text"]').each(function(item) {
+                        $(this).val(res[$(this).attr('name')]);
+                    })
+                }
+            )
         @endisset
-        
+
 
         function submit() {
             var form = $('#form')[0];
@@ -236,6 +267,26 @@
                 fd,
                 function(res) {
                     show_message("اطلاعات با موفقیت ثبت شد")
+                    id= res;
+                    url = "{{route('namayeshgah.form.edit', ['id'=> 'id'])}}"
+                    url = url.replace('id', id);
+                    location.replace(url)
+                    console.log(url);
+                }
+            )
+        }
+
+        function delete_file(id, column_name) {
+            fd = new FormData();
+            fd.append('id', id);
+            fd.append('column_name', column_name);
+            send_ajax_formdata_request(
+                "{{ route('namayeshgah.deleteFile') }}",
+                fd,
+                function(res) {
+                    console.log(res);
+                    location.reload()
+                    show_message(res)
                 }
             )
         }

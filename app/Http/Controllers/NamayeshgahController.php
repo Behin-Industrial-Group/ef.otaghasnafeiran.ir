@@ -23,15 +23,16 @@ class NamayeshgahController extends Controller
     public function add(Request $r){
         $data = $r->all();
         $data['user_id'] = Auth::id();
-        $data['price_file'] = $r->file('price_file') ? UploadController::inPublicFolder($r->file('price_file')) : '';
-        $data['place_checklist_file'] = $r->file('place_checklist_file') ? UploadController::inPublicFolder($r->file('price_file')) : '';
-        $data['booth_checklist_file'] = $r->file('booth_checklist_file') ? UploadController::inPublicFolder($r->file('price_file')) : '';
-        $data['performance_checklist_file'] = $r->file('performance_checklist_file') ? UploadController::inPublicFolder($r->file('price_file')) : '';
+        $data['price_file'] = $r->file('price_file') ? UploadController::inPublicFolder($r->file('price_file')) : null;
+        $data['place_checklist_file'] = $r->file('place_checklist_file') ? UploadController::inPublicFolder($r->file('place_checklist_file')) : null;
+        $data['booth_checklist_file'] = $r->file('booth_checklist_file') ? UploadController::inPublicFolder($r->file('booth_checklist_file')) : null;
+        $data['performance_checklist_file'] = $r->file('performance_checklist_file') ? UploadController::inPublicFolder($r->file('performance_checklist_file')) : null;
 
         if(isset($r->id)){
             Namayeshgah::where('id', $r->id)->update($data);
+            return $r->id;
         }else{
-            Namayeshgah::create($data);
+            return Namayeshgah::create($data)->id;
         }
     }
 
@@ -40,5 +41,16 @@ class NamayeshgahController extends Controller
             'id' => $id,
             'data' => $this->getById($id),
         ]);
+    }
+
+    public function deleteFile(Request $r){
+        $row =Namayeshgah::where('id', $r->id)->where('user_id', Auth::id())->first();
+        if($row){
+            $column_name = $r->column_name;
+            $row->$column_name = null;
+            $row->save();
+            return response(trans("file deleted."));
+        }
+        return response(trans("file can not delete."), 402);
     }
 }
