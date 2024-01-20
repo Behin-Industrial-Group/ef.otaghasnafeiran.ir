@@ -22,15 +22,56 @@
                         @endisset
                         <div class="card-body">
                             <div class="form-group col-sm-4">
-                                <label for="exampleInputPassword1">شماره تماس روابط عمومی نمایشگاه:</label>
-                                <input type="text" name="pr_phone" class="form-control" id="exampleInputPassword1"
-                                    placeholder="شماره تماس روابط عمومی">
+                                <label for="exampleInputPassword1">عنوان نمایشگاه:</label>
+                                <select name="title" id="" class="form-control">
+                                    @foreach (config('namayeshgah.title_types') as $key => $value)
+                                        <option value="{{$key}}">{{$value}}</option>
+                                    @endforeach
+                                </select>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">آدرس دقیق محل برگزاری نمایشگاه:</label>
-                                <input type="text" name="address" class="form-control" id="exampleInputPassword1"
-                                    placeholder="آدرس محل برگزاری نمایشگاه">
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword1">{{ __('executive director fullname') }}:</label>
+                                    <input type="text" name="excutive_director_fullname" class="form-control" id="exampleInputPassword1"
+                                        placeholder="{{ __('executive director fullname') }}">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword1">{{ __('executive director mobile') }}:</label>
+                                    <input type="text" name="excutive_director_mobile" class="form-control" id="exampleInputPassword1"
+                                        placeholder="{{ __('executive director mobile') }}">
+                                </div>
                             </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword1">{{ __('pr fullname') }}:</label>
+                                    <input type="text" name="pr_fullname" class="form-control" id="exampleInputPassword1"
+                                        placeholder="{{ __('pr fullname') }}">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword1">{{ __('pr mobile') }}:</label>
+                                    <input type="text" name="pr_mobile" class="form-control" id="exampleInputPassword1"
+                                        placeholder="{{ __('pr mobile') }}">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword1">شماره تماس روابط عمومی نمایشگاه:</label>
+                                    <input type="text" name="pr_phone" class="form-control" id="exampleInputPassword1"
+                                        placeholder="شماره تماس روابط عمومی">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="exampleInputPassword1">{{ __('land owner fullname') }}:</label>
+                                    <input type="text" name="land_owner_fullname" class="form-control" id="exampleInputPassword1"
+                                        placeholder="{{ __('land owner fullname') }}">
+                                </div>
+                                <div class="form-group col-sm-8">
+                                    <label for="exampleInputPassword1">آدرس دقیق محل برگزاری نمایشگاه:</label>
+                                    <textarea type="text" name="address" class="form-control" id="exampleInputPassword1"
+                                        placeholder="آدرس محل برگزاری نمایشگاه"></textarea>
+                                </div>
+                            </div>
+                            
+                            
                             <div class="form-group col-sm-12">
                                 <label for="exampleInputPassword1">زمان برگزاری نمایشگاه</label>
                                 <div class="row col-sm-12">
@@ -252,6 +293,12 @@
                 function(res) {
                     console.log(res);
                     $('input[type="text"]').each(function(item) {
+                        $(this).val(res[$(this).attr('name')]);
+                    })
+                    $('textarea').each(function(item) {
+                        $(this).html(res[$(this).attr('name')]);
+                    })
+                    $('select').each(function(item) {
                         $(this).val(res[$(this).attr('name')]);
                     })
                 }
