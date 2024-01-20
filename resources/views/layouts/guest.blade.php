@@ -49,7 +49,7 @@
 
 <body class="login-page">
     <div class="banner-div" style="">
-        <img src="public/eid.jpg" class="banner" alt="" >
+        <img src="public/eid.jpg" class="banner col-sm-9" alt="" >
     </div>
     @yield('content')
 

@@ -1,8 +1,8 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="register-box">
-        <div class="card card-outline card-primary">
+    <div class="col-sm-3" id="login-box">
+        <div class="">
             <div class="card-header text-center">
                 <img src="{{ url('public/logo.png') }}" class="col-sm-12" alt="logo" style="width: 150px">
                 <p style="text-align: justify">
