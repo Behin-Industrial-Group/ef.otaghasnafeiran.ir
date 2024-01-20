@@ -22,7 +22,7 @@
                         </div>
                         <hr>
                         
-                        <div id="namayeshgah">
+                        <div id="namayeshgah" class="text-center">
                             <button class="btn btn-primary" onclick="go_to_add_form()">افزودن نمایشگاه</button>
                             <hr>
                         </div>
