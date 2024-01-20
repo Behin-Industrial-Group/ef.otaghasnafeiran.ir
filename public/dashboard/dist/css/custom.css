@@ -187,9 +187,10 @@ legend {
   float: left;
 }
 
-.login-page{
+.login-page, .content{
   background-color: white;
 }
+
 
 @media (max-width: 500px){
   .banner-div{
