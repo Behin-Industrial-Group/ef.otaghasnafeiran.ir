@@ -49,7 +49,7 @@ use App\CustomClasses\Access;
         </li> --}}
         <li class="">
             <a class="" href="{{ route('logout') }}">
-                <i class="fa fa-power-off fa-3 red"></i>
+                <i class="fa fa-power-off fa-6"></i>
             </a>
         </li>
     </ul>
