@@ -15,15 +15,17 @@
                         </h3>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body p-0">
+                        
+                        <div class="">
+                            <img src="public/eid.jpg?{{config('app.version')}}" alt="" width="100%">
+                        </div>
+                        <hr>
+                        
                         <div id="namayeshgah">
                             <button class="btn btn-primary" onclick="go_to_add_form()">افزودن نمایشگاه</button>
+                            <hr>
                         </div>
-                        <div class="row">
-                            <img src="public/eid.jpg?{{config('app.version')}}" class="row" alt="" width="100%">
-                        </div>
-                        
-
                         
                     </div>
                     
@@ -46,7 +48,7 @@
                     res.forEach(function(item){
                         url = "{{ route('namayeshgah.form.edit', ['id' => 'id']) }}";
                         url = url.replace('id', item.id)
-                        n.append(`<a href='${url}' class='btn btn-danger'>ویرایش نمایشگاه <span dir='ltr'>${item.start_date}</span></button><br>`)
+                        n.append(`<a href='${url}' class='btn btn-danger col-sm-5 m-1'>ویرایش نمایشگاه <span dir='ltr'>${item.start_date}</span></button><br>`)
                     })
                 }
             )
