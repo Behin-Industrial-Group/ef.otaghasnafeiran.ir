@@ -9,7 +9,7 @@
             </div>
             <div class="body">
                 <div class="card card-primary">
-                    <div class="card-header text-center ">
+                    <div class="card-header text-center " style="background: #557C55">
                         <h3 class="card-title">
                             درگاه ثبت نام نمایشگاه های عرضه مستقیم کالا عید تا عید
                         </h3>
@@ -23,7 +23,7 @@
                         <hr>
                         
                         <div id="namayeshgah" class="text-center">
-                            <button class="btn btn-primary" onclick="go_to_add_form()">افزودن نمایشگاه</button>
+                            <button class="btn btn-default" onclick="go_to_add_form()" style="background: #557C55; color:white">افزودن نمایشگاه</button>
                             <hr>
                         </div>
                         
