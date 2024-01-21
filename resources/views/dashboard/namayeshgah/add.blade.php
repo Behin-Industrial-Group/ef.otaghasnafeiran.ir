@@ -9,7 +9,7 @@
             </div>
             <div class="body">
                 <div class="card card-primary">
-                    <div class="card-header text-center ">
+                    <div class="card-header text-center " style="background: #557C55">
                         <h3 class="card-title">
                             درگاه ثبت نام نمایشگاه های عرضه مستقیم کالا عید تا عید
                         </h3>
@@ -190,7 +190,7 @@
 
                     </form>
                     <div class="card-footer">
-                        <button class="btn btn-primary" onclick="submit('form')">ثبت</button>
+                        <button class="btn btn-primary" onclick="submit('form')" style="background: #557C55">ثبت</button>
                     </div>
                 </div>
             </div>

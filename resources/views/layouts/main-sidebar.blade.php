@@ -1,5 +1,5 @@
 
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background: #557C55">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="{{ url('public/dashboard/dist/img/avatar5.png') }}" alt="AdminLTE Logo"
