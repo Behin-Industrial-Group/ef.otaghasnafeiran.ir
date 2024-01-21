@@ -48,7 +48,7 @@
                     res.forEach(function(item){
                         url = "{{ route('namayeshgah.form.edit', ['id' => 'id']) }}";
                         url = url.replace('id', item.id)
-                        n.append(`<a href='${url}' class='btn btn-danger col-sm-5 m-1'>ویرایش نمایشگاه <span dir='ltr'>${item.start_date}</span></button><br>`)
+                        n.append(`<a href='${url}' class='btn btn-default col-sm-5 m-1' style="background: #A6CF98; color:white">ویرایش نمایشگاه <span dir='ltr'>${item.start_date}</span></button><br>`)
                     })
                 }
             )
