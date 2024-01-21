@@ -53,4 +53,11 @@ class NamayeshgahController extends Controller
         }
         return response(trans("file can not delete."), 402);
     }
+
+    public function modal(Request $r){
+        return view("dashboard.namayeshgah.$r->view")->with([
+            'id' => $r->id,
+            'data' => $this->getById($r->id),
+        ]);
+    }
 }

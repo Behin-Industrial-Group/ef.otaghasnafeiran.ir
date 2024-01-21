@@ -16,6 +16,7 @@ Route::name('namayeshgah.')->prefix('namayeshgah')->middleware(['auth'])->group(
     Route::name('form.')->prefix('form')->group(function () {
         Route::get('add', [NamayeshgahController::class, 'addForm'])->name('add');
         Route::get('edit/{id}', [NamayeshgahController::class, 'editForm'])->name('edit');
+        Route::post('modal', [NamayeshgahController::class, 'modal'])->name('modal');
     });
 
     Route::get('get/{id}', [NamayeshgahController::class, 'getById'])->name('getById');

@@ -7,5 +7,14 @@
     "username": "نام کابری",
     "password": "رمز عبور",
     "Log in": "ورود",
-    "Forgotten password": "فراموشی رمز"
+    "Forgotten password": "فراموشی رمز",
+    "executive director info": "اطلاعات مسئول اجرایی نمایشگاه",
+    "time and place info": "اطلاعات زمان و مکان برگزاری نمایشگاه",
+    "land owner info": "اطلاعات مالک زمین نمایشگاه",
+    "performancer info": "اطلاعات مجری نمایشگاه",
+    "pr info": "اطلاعات روابط عمومی نمایشگاه",
+    "1th booth info": "اطلاعات غرفه درجه یک",
+    "2th booth info": "اطلاعات غرفه درجه دو",
+    "3th booth info": "اطلاعات غرفه درجه سه",
+    "4th booth info": "اطلاعات غرفه درجه چهار"
 }

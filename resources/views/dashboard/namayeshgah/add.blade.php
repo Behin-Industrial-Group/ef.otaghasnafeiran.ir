@@ -18,135 +18,78 @@
 
                     <form action="javascript:void(0)" id="form">
                         @isset($id)
-                            <input type="hidden" name="id" id="" value="{{ $id }}">
+                            <input type="hidden" name="id" id="id" value="{{ $id }}">
                         @endisset
                         <div class="card-body">
                             <div class="form-group col-sm-4">
                                 <label for="exampleInputPassword1">عنوان نمایشگاه:</label>
                                 <select name="title" id="" class="form-control">
                                     @foreach (config('namayeshgah.title_types') as $key => $value)
-                                        <option value="{{$key}}">{{$value}}</option>
+                                        <option value="{{ $key }}">{{ $value }}</option>
                                     @endforeach
                                 </select>
                             </div>
+                            <hr>
                             <div class="row">
-                                <div class="form-group col-sm-4">
-                                    <label for="exampleInputPassword1">{{ __('executive director fullname') }}:</label>
-                                    <input type="text" name="excutive_director_fullname" class="form-control" id="exampleInputPassword1"
-                                        placeholder="{{ __('executive director fullname') }}">
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="exampleInputPassword1">{{ __('executive director mobile') }}:</label>
-                                    <input type="text" name="excutive_director_mobile" class="form-control" id="exampleInputPassword1"
-                                        placeholder="{{ __('executive director mobile') }}">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-sm-4">
-                                    <label for="exampleInputPassword1">{{ __('pr fullname') }}:</label>
-                                    <input type="text" name="pr_fullname" class="form-control" id="exampleInputPassword1"
-                                        placeholder="{{ __('pr fullname') }}">
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="exampleInputPassword1">{{ __('pr mobile') }}:</label>
-                                    <input type="text" name="pr_mobile" class="form-control" id="exampleInputPassword1"
-                                        placeholder="{{ __('pr mobile') }}">
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label for="exampleInputPassword1">شماره تماس روابط عمومی نمایشگاه:</label>
-                                    <input type="text" name="pr_phone" class="form-control" id="exampleInputPassword1"
-                                        placeholder="شماره تماس روابط عمومی">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-group col-sm-4">
-                                    <label for="exampleInputPassword1">{{ __('land owner fullname') }}:</label>
-                                    <input type="text" name="land_owner_fullname" class="form-control" id="exampleInputPassword1"
-                                        placeholder="{{ __('land owner fullname') }}">
-                                </div>
-                                <div class="form-group col-sm-8">
-                                    <label for="exampleInputPassword1">آدرس دقیق محل برگزاری نمایشگاه:</label>
-                                    <textarea type="text" name="address" class="form-control" id="exampleInputPassword1"
-                                        placeholder="آدرس محل برگزاری نمایشگاه"></textarea>
-                                </div>
-                            </div>
-                            
-                            
-                            <div class="form-group col-sm-12">
-                                <label for="exampleInputPassword1">زمان برگزاری نمایشگاه</label>
-                                <div class="row col-sm-12">
-                                    از:<input type="text" name="start_date" class="form-control col-sm-4 persian-date"
-                                        id="exampleInputPassword1">
-                                    تا:<input type="text" name="end_date" class="form-control col-sm-4 persian-date"
-                                        id="exampleInputPassword1">
+                                <div class="col-sm-6">
+                                    <div class="col-sm-12 text-center ">
+                                        <label class="card-title" style="margin: auto !important">اطلاعات مسئولین
+                                            نمایشگاه</label>
+
+                                        <div class="p-1">
+                                            <button class="btn btn-default col-sm-12 info-btn" id="executive_director"
+                                                onclick="open_modal('executive_director')">{{ __('executive director info') }}</button>
+                                        </div>
+                                        <div class="p-1">
+                                            <button class="btn btn-default col-sm-12 info-btn"
+                                                onclick="open_modal('pr')">{{ __('pr info') }}</button>
+                                        </div>
+                                        <div class="p-1">
+                                            <button class="btn btn-default col-sm-12 info-btn"
+                                                onclick="open_modal('performancer_info')">{{ __('performancer info') }}</button>
+                                        </div>
+                                        <div class="p-1">
+                                            <button class="btn btn-default col-sm-12 info-btn"
+                                                onclick="open_modal('land_owner_info')">{{ __('land owner info') }}</button>
+                                        </div>
+                                        <div class="p-1">
+                                            <button class="btn btn-default col-sm-12 info-btn"
+                                                onclick="open_modal('time_and_palce_info')">{{ __('time and place info') }}</button>
+                                        </div>
+                                    </div>
                                 </div>
 
+
+
+                                <div class="col-sm-6">
+                                    <div class="row text-center ">
+                                        <label class="card-title" style="margin: auto !important">غرفه ها</label>
+                                        <div class="col-sm-12">
+                                            <div class="p-1">
+                                                <button class="btn btn-default col-sm-12"
+                                                    onclick="open_modal('1th_booth_info')">{{ __('1th booth info') }}</button>
+                                            </div>
+                                            <div class="p-1">
+                                                <button class="btn btn-default col-sm-12"
+                                                    onclick="open_modal('2th_booth_info')">{{ __('2th booth info') }}</button>
+                                            </div>
+                                            <div class="p-1">
+                                                <button class="btn btn-default col-sm-12"
+                                                    onclick="open_modal('3th_booth_info')">{{ __('3th booth info') }}</button>
+                                            </div>
+                                            <div class="p-1">
+                                                <button class="btn btn-default col-sm-12"
+                                                    onclick="open_modal('4th_booth_info')">{{ __('4th booth info') }}</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
+                            <hr>
 
-                            <fieldset class="row col-sm-12">
-                                <legend>غرفه ها</legend>
-                                <fieldset>
-                                    <legend>درجه 1</legend>
-                                    <div class="form-group">
-                                        <input type="text" name="number_of_booth1" class="form-control"
-                                            id="exampleInputEmail1" placeholder="تعداد">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="meterage_of_booth1" class="form-control"
-                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="price_of_booth1_per_meter" class="form-control"
-                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>درجه 2</legend>
-                                    <div class="form-group">
-                                        <input type="text" name="number_of_booth2" class="form-control"
-                                            id="exampleInputEmail1" placeholder="تعداد">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="meterage_of_booth2" class="form-control"
-                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="price_of_booth2_per_meter" class="form-control"
-                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>درجه 3</legend>
-                                    <div class="form-group">
-                                        <input type="text" name="number_of_booth3" class="form-control"
-                                            id="exampleInputEmail1" placeholder="تعداد">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="meterage_of_booth3" class="form-control"
-                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="price_of_booth3_per_meter" class="form-control"
-                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
-                                    </div>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>درجه 4</legend>
-                                    <div class="form-group">
-                                        <input type="text" name="number_of_booth4" class="form-control"
-                                            id="exampleInputEmail1" placeholder="تعداد">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="meterage_of_booth4" class="form-control"
-                                            id="exampleInputEmail1" placeholder="متراژ غرفه">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="price_of_booth4_per_meter" class="form-control"
-                                            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
-                                    </div>
-                                </fieldset>
-                            </fieldset>
+                            <hr>
+
 
                             <div class="form-group">
                                 <label for="exampleInputFile">فایل اکسل قیمت کالا و خدمات</label>
@@ -169,6 +112,10 @@
 
                             <div class="form-group">
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی شرایط مکانی نمایشگاه</label>
+                                <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست تایید شرایط مکانی.pdf']) }}"
+                                    target="_blank">
+                                    (دانلود فایل نمونه)
+                                </a>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         @isset($data['place_checklist_file'])
@@ -183,17 +130,16 @@
                                             <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                         @endisset
                                     </div>
-                                    <div class="input-group-append">
-                                        <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست تایید شرایط مکانی.pdf']) }}"
-                                            target="_blank" class="input-group-text">
-                                            نمونه
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی غرفه در زمان فروش در نمایشگاه</label>
+                                <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست ارزیابی غرفه در زمان فروش در نمایشگاه.pdf']) }}"
+                                    target="_blank">
+                                    (دانلود فایل نمونه)
+                                </a>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         @isset($data['booth_checklist_file'])
@@ -208,23 +154,23 @@
                                             <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                         @endisset
                                     </div>
-                                    <div class="input-group-append">
-                                        <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست ارزیابی غرفه در زمان فروش در نمایشگاه.pdf']) }}"
-                                            target="_blank" class="input-group-text">
-                                            نمونه
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputFile">فایل چک لیست ارزیابی مجری برگزاری نمایشگاه در زمان برگزاری
                                     نمایشگاه</label>
+                                    <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست ارزیابی مجری برگزاری نمایشگاه در زمان برگزاری نمایشگاه.pdf']) }}"
+                                        target="_blank">
+                                        (دانلود فایل نمونه)
+                                    </a>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         @isset($data['performance_checklist_file'])
                                             <button class="btn btn-default">
-                                                <a href="{{ $data['performance_checklist_file'] }}" target="_blank">دانلود</a>
+                                                <a href="{{ $data['performance_checklist_file'] }}"
+                                                    target="_blank">دانلود</a>
                                             </button>
                                             <button class="fa fa-trash btn btn-danger"
                                                 onclick="delete_file({{ $data['id'] }}, 'performance_checklist_file')"></button>
@@ -234,39 +180,9 @@
                                             <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                                         @endisset
                                     </div>
-                                    <div class="input-group-append">
-                                        <a href="{{ route('download.fromPublicFolder', ['name' => 'چک لیست ارزیابی مجری برگزاری نمایشگاه در زمان برگزاری نمایشگاه.pdf']) }}"
-                                            target="_blank" class="input-group-text">
-                                            نمونه
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
-
-                            <fieldset class="row col-sm-12">
-                                <legend>مجری <button class="btn btn-default">دانلود نمونه قرارداد با مجری</button></legend>
-
-                                <div class="form-group col-sm-3">
-                                    <label for="exampleInputEmail1">نام مجری: </label>
-                                    <input type="text" name="performancer_name" class="form-control"
-                                        id="exampleInputEmail1" placeholder="نام مجری">
-                                </div>
-                                <div class="form-group col-sm-3">
-                                    <label for="exampleInputPassword1">نام خانوادگی مجری: </label>
-                                    <input type="text" name="performancer_lname" class="form-control"
-                                        id="exampleInputPassword1" placeholder="نام خانوادگی مجری">
-                                </div>
-                                <div class="form-group col-sm-3">
-                                    <label for="exampleInputPassword1">کدملی مجری: </label>
-                                    <input type="text" name="performancer_nid" class="form-control"
-                                        id="exampleInputPassword1" placeholder="کدملی مجری">
-                                </div>
-                                <div class="form-group col-sm-3">
-                                    <label for="exampleInputPassword1">تلفن همراه مجری: </label>
-                                    <input type="text" name="performancer_mobile" class="form-control"
-                                        id="exampleInputPassword1" placeholder="تلفن همراه مجری">
-                                </div>
-                            </fieldset>
 
 
                         </div>
@@ -274,7 +190,7 @@
 
                     </form>
                     <div class="card-footer">
-                        <button class="btn btn-primary" onclick="submit()">ثبت</button>
+                        <button class="btn btn-primary" onclick="submit('form')">ثبت</button>
                     </div>
                 </div>
             </div>
@@ -306,22 +222,42 @@
         @endisset
 
 
-        function submit() {
-            var form = $('#form')[0];
+        function submit(form_id = 'form') {
+
+            var form = $('#' + form_id)[0];
             fd = new FormData(form);
             send_ajax_formdata_request(
                 "{{ route('namayeshgah.add') }}",
                 fd,
                 function(res) {
                     show_message("اطلاعات با موفقیت ثبت شد")
-                    id= res;
-                    url = "{{route('namayeshgah.form.edit', ['id'=> 'id'])}}"
-                    url = url.replace('id', id);
-                    location.replace(url)
-                    console.log(url);
+                    id = res;
+                    console.log(form_id);
+                    if (form_id == "form") {
+                        url = "{{ route('namayeshgah.form.edit', ['id' => 'id']) }}"
+                        url = url.replace('id', id);
+                        location.replace(url)
+                        console.log(res);
+                    }
+
                 }
             )
         }
+
+        function open_modal(view_name) {
+            fd = new FormData();
+            fd.append('id', '{{ $id ?? '' }}')
+            fd.append('view', view_name)
+            send_ajax_formdata_request(
+                "{{ route('namayeshgah.form.modal') }}",
+                fd,
+                function(res) {
+                    console.log(res);
+                    open_admin_modal_with_data(res)
+                }
+            )
+        }
+
 
         function delete_file(id, column_name) {
             fd = new FormData();
