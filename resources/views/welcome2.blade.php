@@ -301,10 +301,11 @@
 			امسال با شعار <span style="font-weight: 700">(عید تا عید)</span> به استقبال سالی عالی و باشکوه میرویم
 		</p>
 
-        <form>
+        <form action="javascript:void(0)" method="post" id="login-form">
+			@csrf
             <input type="text" name="email" placeholder="{{__('username')}}" autocomplete="off">
-            <input type="password" name="pass" placeholder="{{__('password')}}">
-            <a href="#">{{__('Log in')}}</a>
+            <input type="password" name="password" placeholder="{{__('password')}}">
+            <a onclick="submit()" >{{__('Log in')}}</a>
             <div id="remember-container">
                 <span id="forgotten">{{__('Forgotten password')}}</span>
             </div>
@@ -323,8 +324,29 @@
             <a href="#" class="orange-btn">Get new password</a>
         </form>
     </div>
+	<script src="{{ url('public/js/loader.js') . '?' . config('app.version') }}"></script>
+    <script src="{{ url('public/js/clearcach.js') . '?' . config('app.version') }}"></script>
+    <script src="{{ url('public/js/scripts.js') . '?' . config('app.version') }}"></script>
+
     <script>
         $("#container").fadeIn();
+    </script>
+	<script>
+        function submit() {
+            send_ajax_request(
+                "{{ route('login') }}",
+                $('#login-form').serialize(),
+                function(response) {
+                    show_message("به صفحه داشبورد منتقل میشوید")
+                    window.location = "{{ url('dashboard') }}"
+                },
+                function(response) {
+                    // console.log(response);
+                    show_error(response)
+                    hide_loading();
+                }
+            )
+        }
     </script>
 </body>
 
