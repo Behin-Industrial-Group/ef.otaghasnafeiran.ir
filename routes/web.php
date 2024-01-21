@@ -57,7 +57,7 @@ Route::get('/build-app', function () {
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome2');
 });
 
 Route::get('/2', function () {
