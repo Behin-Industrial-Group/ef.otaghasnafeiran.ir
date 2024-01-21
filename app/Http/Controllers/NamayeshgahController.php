@@ -17,6 +17,10 @@ class NamayeshgahController extends Controller
     }
 
     public function addForm(){
+        $id = Namayeshgah::create([
+            'user_id' => Auth::id()
+        ])->id;
+        return $this->editForm($id);
         return view('dashboard.namayeshgah.add');
     }
 
