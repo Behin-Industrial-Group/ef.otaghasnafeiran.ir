@@ -252,7 +252,6 @@
                 "{{ route('namayeshgah.form.modal') }}",
                 fd,
                 function(res) {
-                    console.log(res);
                     open_admin_modal_with_data(res)
                 }
             )

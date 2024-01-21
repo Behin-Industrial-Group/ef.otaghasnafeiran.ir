@@ -221,7 +221,6 @@ function open_admin_modal_with_data(data, title = '', customFun = null){
 
     $('#admin-modal #modal-body').html(data);
     $('#admin-modal').modal('show')
-    setTimeout(customFun(), 1000);
 }
 
 function close_admin_modal(){
