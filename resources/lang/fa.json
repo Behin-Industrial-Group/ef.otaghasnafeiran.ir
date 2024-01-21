@@ -3,5 +3,9 @@
     "pr fullname": "نام کامل مسئول روابط عمومی نمایشگاه",
     "pr mobile": "شماره همراه مسئول روابط عمومی نمایشگاه",
     "executive director fullname": "نام کامل مسئول اجرائی نمایشگاه",
-    "executive director mobile": "شماره همراه مسئول اجرائی نمایشگاه"
+    "executive director mobile": "شماره همراه مسئول اجرائی نمایشگاه",
+    "username": "نام کابری",
+    "password": "رمز عبور",
+    "Log in": "ورود",
+    "Forgotten password": "فراموشی رمز"
 }
