@@ -310,7 +310,7 @@
         <form action="javascript:void(0)" method="post" id="login-form" style="display: none">
 			@csrf
             <input type="text" name="email" id="email" placeholder="{{__('mobile')}}" autocomplete="off" readonly>
-            <input type="text" name="password" placeholder="{{__('sended code')}}">
+            <input type="text" name="password" placeholder="{{__('sended code')}}" autocomplete="off">
             <a onclick="submit()" >{{__('Log in')}}</a>
         </form>
     </div>
