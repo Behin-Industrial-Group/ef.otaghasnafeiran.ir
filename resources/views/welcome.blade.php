@@ -298,8 +298,9 @@
 		<p style="text-align: justify">
 			مردم شهر و شهرستان شما امسال با خرید کالای با کیفیت و قیمت های عالی در فضای بسیار زیبا نمایشگاه بهاره،
 			قدردان تلاش‌های صادقانه آن اتاق خواهند بود.
-			امسال با شعار <span style="font-weight: 700">(عید تا عید)</span> به استقبال سالی عالی و باشکوه میرویم
+			امسال با شعار <span style="font-weight: 700">(عید تا عید)</span> به استقبال سالی عالی و باشکوه میرویم.
 		</p>
+        <p>ریاست محترم اتاق اصناف لطفا جهت ورود شماره موبایل خود را وارد کنید</p>
         <form action="javascript:void(0)" method="post" id="send-code-form">
 			@csrf
             <input type="text" name="mobile" id="mobile" placeholder="{{__('mobile')}}" autocomplete="off">
