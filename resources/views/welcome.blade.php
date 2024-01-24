@@ -61,7 +61,7 @@
     </script>
     <style>
         html {
-            background: url("{{url('public/eid.jpg')}}?{{config('app.version')}}") no-repeat center center fixed;
+            background: url("{{url('public/eid.png')}}?{{config('app.version')}}") no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
