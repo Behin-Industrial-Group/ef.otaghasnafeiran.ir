@@ -67,7 +67,6 @@
             -o-background-size: cover;
             background-size: cover;
             overflow: hidden;
-			
         }
 
         img {
