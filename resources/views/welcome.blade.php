@@ -176,7 +176,7 @@
 
         /* Placeholders */
         ::-webkit-input-placeholder {
-            color: #ddd;
+            color: #000000;
         }
 
         :-moz-placeholder {
@@ -300,15 +300,17 @@
 			قدردان تلاش‌های صادقانه آن اتاق خواهند بود.
 			امسال با شعار <span style="font-weight: 700">(عید تا عید)</span> به استقبال سالی عالی و باشکوه میرویم
 		</p>
-
-        <form action="javascript:void(0)" method="post" id="login-form">
+        <form action="javascript:void(0)" method="post" id="send-code-form">
 			@csrf
-            <input type="text" name="email" placeholder="{{__('username')}}" autocomplete="off">
-            <input type="password" name="password" placeholder="{{__('password')}}">
+            <input type="text" name="mobile" id="mobile" placeholder="{{__('mobile')}}" autocomplete="off">
+            <a onclick="send_code()" >{{__('Send code')}}</a>
+        </form>
+
+        <form action="javascript:void(0)" method="post" id="login-form" style="display: none">
+			@csrf
+            <input type="text" name="email" id="email" placeholder="{{__('mobile')}}" autocomplete="off" readonly>
+            <input type="text" name="password" placeholder="{{__('sended code')}}">
             <a onclick="submit()" >{{__('Log in')}}</a>
-            <div id="remember-container">
-                <span id="forgotten">{{__('Forgotten password')}}</span>
-            </div>
         </form>
     </div>
 
@@ -332,6 +334,31 @@
         $("#container").fadeIn();
     </script>
 	<script>
+        send_code_form = $('#send-code-form')
+        login_form = $('#login-form')
+        function send_code() {
+            
+            send_ajax_request(
+                "{{ route('sendLoginCode') }}",
+                send_code_form.serialize(),
+                function(response) {
+                    show_message("پیامک ارسال شد")
+                    send_code_form.hide()
+                    mobile = $('#mobile').val();
+                    if(mobile.length == 11){
+                        mobile = mobile.substr(1);
+                    }
+                    $('#email').val(mobile)
+                    login_form.show()
+                    // window.location = "{{ url('dashboard') }}"
+                },
+                function(response) {
+                    // console.log(response);
+                    show_error(response)
+                    hide_loading();
+                }
+            )
+        }
         function submit() {
             send_ajax_request(
                 "{{ route('login') }}",
