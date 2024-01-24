@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'd69fa7dea4b485f8c59c76b7d1257d6c00ecae18',
+        'reference' => 'a878bda7b95d3b5a5260b7ebfa2e6f359c241482',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -33,6 +33,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'cryptommer/smsir' => array(
+            'pretty_version' => 'v1.1.3',
+            'version' => '1.1.3.0',
+            'reference' => '9ff32626694852c7f5dbea4c14b504cdbfab5e47',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../cryptommer/smsir',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'davedevelopment/hamcrest-php' => array(
             'dev_requirement' => true,
@@ -391,7 +400,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd69fa7dea4b485f8c59c76b7d1257d6c00ecae18',
+            'reference' => 'a878bda7b95d3b5a5260b7ebfa2e6f359c241482',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

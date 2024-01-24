@@ -19,5 +19,8 @@
     "4th booth info": "اطلاعات غرفه درجه چهار",
     "sended code": "کد ارسال شده",
     "Send code": "ارسال کد",
-    "mobile": "شماره همراه"
+    "mobile": "شماره همراه",
+    "code was sended for you in last 2 minutes": "کد در 5 دقیقه گذشته برای شما پیامک شده است",
+    "Code was expired": "کد ورود منقضی شده است",
+    "sms sended": "پیامک ارسال شد"
 }

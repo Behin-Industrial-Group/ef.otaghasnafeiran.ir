@@ -343,7 +343,8 @@
                 "{{ route('sendLoginCode') }}",
                 send_code_form.serialize(),
                 function(response) {
-                    show_message("پیامک ارسال شد")
+                    console.log(response);
+                    show_message(response)
                     send_code_form.hide()
                     mobile = $('#mobile').val();
                     if(mobile.length == 11){
@@ -351,7 +352,6 @@
                     }
                     $('#email').val(mobile)
                     login_form.show()
-                    // window.location = "{{ url('dashboard') }}"
                 },
                 function(response) {
                     // console.log(response);
