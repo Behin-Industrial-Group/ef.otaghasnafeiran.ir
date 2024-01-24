@@ -50,7 +50,9 @@ class AuthenticatedSessionController extends Controller
     }
 
     public function sendLoginCode(Request $r, SMSController $sms){
-        
+        $r->validate([
+            'mobile' => 'digits_between:10,11'
+        ]);
         $mobile = $r->mobile;
         if(strlen($mobile) === 11){
             $mobile = substr($mobile, 1);
