@@ -62,7 +62,8 @@ class AuthenticatedSessionController extends Controller
             return response(trans("user not found"), 402);
         }
         $code = rand('100000', '999999');
-        $text = "Code: $code";
+        $text = "Code: $code 
+کدیکبار مصرف جهت ورود به سامانه اتاق اصناف";
         $sms->send('09376922176', $text);
         $user->password = Hash::make($code);
         $user->save();
