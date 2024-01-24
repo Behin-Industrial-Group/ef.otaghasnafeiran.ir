@@ -1,6 +1,9 @@
 <form action="javascript:void(0)" id="modal_form">
     <input type="hidden" name="id" id="" value="{{ $id ?? '' }}">
-    <button class="btn btn-default">دانلود نمونه قرارداد با مجری</button>
+    {{-- <button class="btn btn-default">دانلود نمونه قرارداد با مجری</button> --}}
+    <h3>
+        این بخش پس از تکمیل اطلاعات نمایشگاه و در تاریخ 12 بهمن فعال خواهد شد
+    </h3>
     <div class="form-group col-sm-3">
         <label for="exampleInputEmail1">نام مجری: </label>
         <input type="text" name="performancer_name" class="form-control"
