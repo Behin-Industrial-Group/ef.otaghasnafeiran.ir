@@ -18,7 +18,7 @@
                     <div class="card-body p-0">
                         
                         <div class="">
-                            <img src="public/eid.jpg?{{config('app.version')}}" alt="" width="100%">
+                            <img src="public/eid.png?{{config('app.version')}}" alt="" width="100%">
                         </div>
                         <hr>
                         
