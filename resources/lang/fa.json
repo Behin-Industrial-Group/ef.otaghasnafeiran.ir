@@ -22,5 +22,6 @@
     "mobile": "شماره همراه",
     "code was sended for you in last 2 minutes": "کد در 5 دقیقه گذشته برای شما پیامک شده است",
     "Code was expired": "کد ورود منقضی شده است",
-    "sms sended": "پیامک ارسال شد"
+    "sms sended": "پیامک ارسال شد",
+    "user not found": "کاربر یافت نشد"
 }
