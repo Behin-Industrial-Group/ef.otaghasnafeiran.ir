@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
 return [
-    'version' => '1.4',
+    'version' => '1.5',
     /*
     |--------------------------------------------------------------------------
     | Application Name
