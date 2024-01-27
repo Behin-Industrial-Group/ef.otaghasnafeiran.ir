@@ -26,6 +26,7 @@ class NamayeshgahController extends Controller
 
     public function add(Request $r){
         $r->validate([
+            'pr_mobile' => 'digits:11',
             'pr_phone' => 'digits:11',
             'excutive_director_mobile' => 'digits:11',
             'performancer_nid' => 'digits:10',
