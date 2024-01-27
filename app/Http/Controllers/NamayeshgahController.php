@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Namayeshgah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Mkhodroo\Cities\Controllers\CityController;
 
 class NamayeshgahController extends Controller
 {
@@ -13,7 +14,10 @@ class NamayeshgahController extends Controller
     }
 
     public function getById($id){
-        return Namayeshgah::find($id);
+        $data = Namayeshgah::find($id);
+        $city = CityController::getById($data->city_id);
+        $data->city = $city->province . ' ' . $city->city;
+        return $data;
     }
 
     public function addForm(){
@@ -43,6 +47,10 @@ class NamayeshgahController extends Controller
             'number_of_booth4' => 'numeric',
             'meterage_of_booth4' => 'numeric',
             'price_of_booth4_per_meter' => 'numeric',
+            'price_file' => 'extensions:xlsx',
+            'place_checklist_file' => 'extensions:pdf,xlsx',
+            'booth_checklist_file' => 'extensions:pdf,xlsx',
+            'performance_checklist_file' => 'extensions:pdf,xlsx'
         ]);
         $data = $r->all();
         $data['user_id'] = Auth::id();

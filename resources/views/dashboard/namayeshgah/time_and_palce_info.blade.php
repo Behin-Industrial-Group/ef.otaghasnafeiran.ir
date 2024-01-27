@@ -24,9 +24,9 @@
     <div class="form-group col-sm-12">
         <label for="exampleInputPassword1">زمان برگزاری نمایشگاه</label>
         <div class="row col-sm-12">
-            از:<input type="text" name="start_date"class="form-control col-sm-4 persian-date"
+            از:<input type="text" name="start_date"class="form-control col-sm-4 persian-date" dir="auto"
                 id="exampleInputPassword1">
-            تا:<input type="text" name="end_date"class="form-control col-sm-4 persian-date"
+            تا:<input type="text" name="end_date"class="form-control col-sm-4 persian-date" dir="auto"
                 id="exampleInputPassword1">
         </div>
 

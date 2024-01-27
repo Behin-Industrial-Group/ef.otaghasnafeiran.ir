@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Namayeshgah;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Mkhodroo\Cities\Controllers\CityController;
 
 class NamayeshgahInfoController extends Controller
 {
