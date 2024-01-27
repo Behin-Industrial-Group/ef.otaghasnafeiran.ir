@@ -8,6 +8,8 @@
                     <th>{{ __('id') }}</th>
                     <th>{{ __('username') }}</th>
                     <th>{{ __('mobile') }}</th>
+                    <th>{{ __('start_date') }}</th>
+                    <th>{{ __('end_date') }}</th>
                     <th>{{ __('created_at') }}</th>
                 </tr>
             </thead>
@@ -29,6 +31,8 @@
                 {data: 'user', render: function(data){
                     return data.email
                 }},
+                {data: 'start_date'},
+                {data: 'end_date'},
                 {data: 'created_at'}
             ]
         )
