@@ -334,10 +334,12 @@
         $("#container").fadeIn();
     </script>
 	<script>
+        @if(Auth::id())
+            window.location = "{{ url('dashboard') }}"
+        @endif
         send_code_form = $('#send-code-form')
         login_form = $('#login-form')
         function send_code() {
-            
             send_ajax_request(
                 "{{ route('sendLoginCode') }}",
                 send_code_form.serialize(),
