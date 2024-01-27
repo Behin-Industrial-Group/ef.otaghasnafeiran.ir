@@ -25,6 +25,24 @@ class NamayeshgahController extends Controller
     }
 
     public function add(Request $r){
+        $r->validate([
+            'pr_phone' => 'digits:11',
+            'excutive_director_mobile' => 'digits:11',
+            'performancer_nid' => 'digits:10',
+            'performancer_mobile' => 'digits:11',
+            'number_of_booth1' => 'numeric',
+            'meterage_of_booth1' => 'numeric',
+            'price_of_booth1_per_meter' => 'numeric',
+            'number_of_booth2' => 'numeric',
+            'meterage_of_booth2' => 'numeric',
+            'price_of_booth2_per_meter' => 'numeric',
+            'number_of_booth3' => 'numeric',
+            'meterage_of_booth3' => 'numeric',
+            'price_of_booth3_per_meter' => 'numeric',
+            'number_of_booth4' => 'numeric',
+            'meterage_of_booth4' => 'numeric',
+            'price_of_booth4_per_meter' => 'numeric',
+        ]);
         $data = $r->all();
         $data['user_id'] = Auth::id();
         $data['price_file'] = $r->file('price_file') ? UploadController::inPublicFolder($r->file('price_file')) : null;
