@@ -4,24 +4,24 @@
     <h3>
         این بخش پس از تکمیل اطلاعات نمایشگاه و در تاریخ 12 بهمن فعال خواهد شد
     </h3>
-    <div class="form-group col-sm-3">
+    <div class="form-group col-sm-8">
         <label for="exampleInputEmail1">نام مجری: </label>
         <input type="text" name="performancer_name" class="form-control"
             id="exampleInputEmail1" placeholder="نام مجری">
     </div>
-    <div class="form-group col-sm-3">
+    <div class="form-group col-sm-8">
         <label for="exampleInputPassword1">نام خانوادگی مجری: </label>
         <input type="text" name="performancer_lname" class="form-control"
             id="exampleInputPassword1" placeholder="نام خانوادگی مجری">
     </div>
-    <div class="form-group col-sm-3">
+    <div class="form-group col-sm-8">
         <label for="exampleInputPassword1">کدملی مجری: </label>
-        <input type="text" name="performancer_nid" class="form-control"
+        <input type="text" name="performancer_nid" class="form-control" dir="ltr"
             id="exampleInputPassword1" placeholder="کدملی مجری">
     </div>
-    <div class="form-group col-sm-3">
+    <div class="form-group col-sm-8">
         <label for="exampleInputPassword1">تلفن همراه مجری: </label>
-        <input type="text" name="performancer_mobile" class="form-control"
+        <input type="text" name="performancer_mobile" class="form-control" dir="ltr"
             id="exampleInputPassword1" placeholder="تلفن همراه مجری">
     </div>
 </form>
