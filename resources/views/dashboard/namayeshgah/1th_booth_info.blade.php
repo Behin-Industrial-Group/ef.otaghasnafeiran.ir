@@ -8,7 +8,7 @@
             placeholder="متراژ غرفه">
     </div>
     <div class="form-group">
-        <input type="text" name="price_of_booth1_per_meter" class="form-control" id="exampleInputEmail1"
+        <input type="text" name="price_of_booth1_per_meter" class="form-control" id="exampleInputEmail1" dir="ltr"
             placeholder="قیمت به ازای هر متر مربع (ریال)">
     </div>
 </form>
