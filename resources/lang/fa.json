@@ -24,6 +24,7 @@
     "Code was expired": "کد ورود منقضی شده است",
     "sms sended": "پیامک ارسال شد",
     "user not found": "کاربر یافت نشد",
+    "user is disable": "کاربر غیرفعال است",
     "id": "شناسه",
     "user_id": "شناسه کاربر",
     "pr_phone": "تلفن روابط عمومی",

@@ -24,12 +24,13 @@ class Access
         $guards = empty($guards) ? [null] : $guards;
 
         if(!Auth::id()){
-            return abort(403, 'ابتدا وارد شوید');
+            return abort(403, trans("Login First"));
         }
+       
         $route = $request->route()->getName() ? $request->route()->getName() : $request->route()->uri();
         $a = new AccessController($route);
         if(!$a->check()){
-            return abort(403, "Forbidden For Route: " . $route);
+            return abort(403, trans("Forbidden For Route: ") . $route);
         }
 
         

@@ -72,6 +72,9 @@ class AuthenticatedSessionController extends Controller
         if(!$user){
             return response(trans("user not found"), 402);
         }
+        if(!$user->enable){
+            return response(trans("user is disable"), 402);
+        }
         if($user->last_send_code_time){
             $last_time = Carbon::parse($user->last_send_code_time);
             $now = Carbon::now();
