@@ -1,6 +1,6 @@
 <form action="javascript:void(0)" id="modal_form">
     <input type="hidden" name="id" id="" value="{{ $id ?? '' }}">
-    <div class="form-group col-sm-4">
+    <div class="form-group col-sm-8">
         <label for="exampleInputPassword1">{{ __('land owner fullname') }}:</label>
         <input type="text" name="land_owner_fullname" class="form-control"
             id="exampleInputPassword1" placeholder="{{ __('land owner fullname') }}">
