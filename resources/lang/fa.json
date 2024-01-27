@@ -60,5 +60,8 @@
     "land_owner_mobile": "موبایل مالک زمین نمایشگاه",
     "title": "عنوان",
     "city_id": "شناسه شهر",
-    "city": "شهر"
+    "city": "شهر",
+    "dblclick to show details": "جهت مشاهده جزئیات دوبار کلید کنید",
+    "created_at": "ایجاد شده در",
+    "at": "در"
 }

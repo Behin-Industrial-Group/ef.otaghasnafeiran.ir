@@ -16,7 +16,7 @@ class NamayeshgahController extends Controller
     public function getById($id){
         $data = Namayeshgah::find($id);
         $city = CityController::getById($data->city_id);
-        $data->city = $city->province . ' ' . $city->city;
+        $data->city = $city?->province . ' ' . $city?->city;
         return $data;
     }
 

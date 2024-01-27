@@ -33,13 +33,23 @@
                 }},
                 {data: 'start_date'},
                 {data: 'end_date'},
-                {data: 'created_at'}
+                {data: 'created_at', render:function(data){
+                    datetime = new Date(data);
+                    date = datetime.toLocaleDateString('fa-IR');
+                    time = datetime.toLocaleTimeString('fa-IR');
+                    return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
+                }}
             ]
         )
 
         table.on('dblclick', 'tr', function(){
             var data = table.row( this ).data();
             show_edit_modal(data.id);
+        })
+
+        table.on('mouseover', 'tr', function(){
+            $(this).css('cursor', 'pointer')
+            $(this).attr('title', '{{__("dblclick to show details")}}')
         })
 
         function show_edit_modal(id){
