@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
         <input type="text" name="price_of_booth3_per_meter" class="form-control"
-            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع">
+            id="exampleInputEmail1" placeholder="قیمت به ازای هر متر مربع (ریال)">
     </div>
 </form>
 <button class="btn btn-primary" onclick="submit('modal_form')">ثبت</button>
