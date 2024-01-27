@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboradController;
 use App\Http\Controllers\NamayeshgahController;
+use App\Http\Controllers\NamayeshgahInfoController;
 use App\Http\Controllers\ProfileController;
 use App\Models\User;
 use App\Models\UserInfo;
@@ -23,5 +24,15 @@ Route::name('namayeshgah.')->prefix('namayeshgah')->middleware(['auth'])->group(
     Route::get('get-mine', [NamayeshgahController::class, 'getMine'])->name('getMine');
     Route::post('add', [NamayeshgahController::class, 'add'])->name('add');
     Route::post('delete-file', [NamayeshgahController::class, 'deleteFile'])->name('deleteFile');
+});
 
+
+Route::name('namayeshgahInfo.')->prefix('namayeshgah-info')->middleware(['auth', 'access'])->group(function () {
+    Route::name('form.')->prefix('form')->group(function () {
+        Route::get('list', [NamayeshgahInfoController::class, 'listForm'])->name('list');
+        Route::get('edit/{id}', [NamayeshgahInfoController::class, 'editForm'])->name('edit');
+    });
+
+    Route::get('list', [NamayeshgahInfoController::class, 'list'])->name('list');
+    Route::get('get/{id}', [NamayeshgahInfoController::class, 'getById'])->name('getById');
 });

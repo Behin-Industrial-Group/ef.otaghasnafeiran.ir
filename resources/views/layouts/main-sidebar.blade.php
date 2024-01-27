@@ -25,7 +25,7 @@
                     @foreach (config('sidebar.menu') as $menu)
                         @if (auth()->user()->access('منو >>' . $menu['fa_name']))
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link active" style="background: #FA7070">
+                                <a href="#" class="nav-link ">
                                     <i class="nav-icon fa fa-dashboard"></i>
                                     <p>
                                         {{ $menu['fa_name'] }}
@@ -42,7 +42,7 @@
                                                     {{ $submenu['static-url'] }}
                                                 @else
                                                     {{ url($submenu['route-url']) }} @endif"
-                                                    class="nav-link active">
+                                                    class="nav-link ">
                                                     <i class="fa fa-circle-o nav-icon"></i>
                                                     <p>{{ $submenu['fa_name'] }}</p>
                                                 </a>

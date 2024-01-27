@@ -18,10 +18,10 @@ return [
                 'draft' => [ 'fa_name' => 'پیش نویس', 'route-name' => 'MkhodrooProcessMaker.forms.draft', 'route-url' => '' ]
             ]
         ],
-        'content' => [
-            'fa_name' => 'محتوا',
+        'namayeshgah-info' => [
+            'fa_name' => 'اطلاعات نمایشگاه ها',
             'submenu' => [
-                'dashboard' => [ 'fa_name' => 'محتوا', 'route-name' => 'binshopsblog.admin.index', 'route-url' => '' ],
+                'dashboard' => [ 'fa_name' => 'همه', 'route-name' => 'namayeshgahInfo.form.list', 'route-url' => '' ],
             ]
         ],
         'agencies' => [
