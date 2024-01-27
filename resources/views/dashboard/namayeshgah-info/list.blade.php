@@ -23,9 +23,13 @@
             "{{route('namayeshgahInfo.list')}}",
             [
                 {data: 'id'},
-                {data: 'id'},
-                {data: 'id'},
-                {data: 'id'}
+                {data: 'user', render: function(data){
+                    return data.name
+                }},
+                {data: 'user', render: function(data){
+                    return data.email
+                }},
+                {data: 'created_at'}
             ]
         )
 

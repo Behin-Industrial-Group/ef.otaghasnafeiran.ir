@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Namayeshgah;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class NamayeshgahInfoController extends Controller
@@ -13,7 +14,9 @@ class NamayeshgahInfoController extends Controller
 
     public function list(){
         return [
-            'data' => Namayeshgah::get()
+            'data' => Namayeshgah::get()->each(function($row){
+                $row->user = User::find($row->user_id);
+            })
         ];
     }
 
