@@ -38,6 +38,7 @@ class UserController extends Controller
         User::where('id', $r->id)->update($r->except('_token', 'updated_at', 'created_at'));
         return response(trans("Edited"));
     }
+    
 
     function changeUserRole(Request $r) {
         User::where('id', $r->user_id)->update([

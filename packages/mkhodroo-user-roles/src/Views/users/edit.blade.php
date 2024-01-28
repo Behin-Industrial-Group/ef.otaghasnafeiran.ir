@@ -14,7 +14,7 @@
     </div>
     <div class="col-sm-6">
         <h4>{{ _('Profile') }}</h4><hr>
-        <form action="javascript:void()" id="method-form">
+        <form action="javascript:void()" id="info-form">
             @csrf
             @foreach ($user_info as $key => $value)
                 <label for="">{{ __($key) }}</label>
@@ -33,6 +33,16 @@
         send_ajax_request(
             "{{ route('user.edit') }}",
             $('#user-form').serialize(),
+            function(data) {
+                console.log(data);
+            }
+        )
+    }
+
+    function edit_profile() {
+        send_ajax_request(
+            "{{ route('user.editInfo') }}",
+            $('#info-form').serialize(),
             function(data) {
                 console.log(data);
             }

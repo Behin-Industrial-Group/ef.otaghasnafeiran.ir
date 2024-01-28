@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\UserRoles\Controllers\GetRoleController;
 use Mkhodroo\UserRoles\Controllers\UserController;
+use Mkhodroo\UserRoles\Controllers\UserInfoController;
 
 Route::name('role.')->prefix('role')->middleware(['web', 'auth','access'])->group(function(){
     Route::get('list-form', [GetRoleController::class, 'listForm'])->name('listForm');
@@ -17,5 +18,6 @@ Route::name('user.')->prefix('user')->middleware(['web', 'auth','access'])->grou
     Route::get('list', [UserController::class, 'list'])->name('list');
     Route::post('get', [UserController::class, 'get'])->name('get');
     Route::post('edit', [UserController::class, 'edit'])->name('edit');
+    Route::post('edit-info', [UserInfoController::class, 'edit'])->name('editInfo');
     Route::post('change-user-role', [GetRoleController::class, 'changeUserRole'])->name('changeUserRole');
 });
