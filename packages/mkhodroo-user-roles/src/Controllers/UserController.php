@@ -35,18 +35,8 @@ class UserController extends Controller
     }
 
     function edit(Request $r) {
-        foreach(GetMethodsController::getAll() as $method){
-            Access::updateOrCreate(
-                [
-                    'user_id' => $r->role_id,
-                    'method_id' => $method->id
-                ],
-                [
-                    'access' => $r->input("$method->id") ? 1 : 0
-                ]
-            );
-        }
-        return response('ok');
+        User::where('id', $r->id)->update($r->except('_token', 'updated_at', 'created_at'));
+        return response(trans("Edited"));
     }
 
     function changeUserRole(Request $r) {

@@ -16,6 +16,6 @@ Route::name('user.')->prefix('user')->middleware(['web', 'auth','access'])->grou
     Route::get('list-form', [UserController::class, 'listForm'])->name('listForm');
     Route::get('list', [UserController::class, 'list'])->name('list');
     Route::post('get', [UserController::class, 'get'])->name('get');
-    Route::post('edit', [GetRoleController::class, 'edit'])->name('edit');
+    Route::post('edit', [UserController::class, 'edit'])->name('edit');
     Route::post('change-user-role', [GetRoleController::class, 'changeUserRole'])->name('changeUserRole');
 });
