@@ -35,4 +35,8 @@ Route::name('namayeshgahInfo.')->prefix('namayeshgah-info')->middleware(['auth',
 
     Route::get('list', [NamayeshgahInfoController::class, 'list'])->name('list');
     Route::get('get/{id}', [NamayeshgahInfoController::class, 'getById'])->name('getById');
+
+    Route::name('report.')->prefix('report')->group(function () {
+        Route::get('summary', [NamayeshgahInfoController::class, 'summary'])->name('summary');
+    });
 });

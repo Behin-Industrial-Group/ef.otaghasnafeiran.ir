@@ -27,4 +27,12 @@ class NamayeshgahInfoController extends Controller
             'data' => collect($data)
         ]);
     }
+
+    public function summary(NamayeshgahController $nc){
+        $all = $nc->getAll();
+        return [
+            'all' => $all->count(),
+            'info' => $all->whereNotNull('start_date')->count(),
+        ];
+    }
 }

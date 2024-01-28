@@ -20,6 +20,10 @@ class NamayeshgahController extends Controller
         return $data;
     }
 
+    public function getAll(){
+        return Namayeshgah::get();
+    }
+
     public function addForm(){
         $id = Namayeshgah::create([
             'user_id' => Auth::id()
