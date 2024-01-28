@@ -9,6 +9,7 @@
                         <th>شناسه</th>
                         <th>نام</th>
                         <th>{{__('username')}}</th>
+                        <th>{{__('enable')}}</th>
                         <th>ایجاد</th>
                     </tr>
                 </thead>
@@ -26,6 +27,7 @@
                 {data : 'id'},
                 {data : 'name'},
                 {data : 'email'},
+                {data : 'enable'},
                 {data : 'created_at', render: function(data){
                     return new Date(data).toLocaleDateString('fa-IR')
                 }}
