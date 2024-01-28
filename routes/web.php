@@ -20,11 +20,15 @@ use Spatie\SimpleExcel\SimpleExcelReader;
 |
 */
 Route::get('/import-user', function () {
-    $rows = SimpleExcelReader::create(public_path('Book1.xlsx'))->getRows();
+    $rows = SimpleExcelReader::create(public_path('Book2.xlsx'))->getRows();
     echo "<pre>";
     $rows->each(function(array $rowProperties){
-        if($rowProperties['همراه']){
-            // print_r($rowProperties);
+        if($rowProperties['mobile']){
+            print_r($rowProperties);
+            $user= User::where('email', $rowProperties['mobile'])->first();
+            $user->enable = 0;
+            $user->save();
+            print($user->enable);
             // $province = $rowProperties['استان'];
             // $city = $rowProperties['شهرستان'];
             // $name = "اتاق اصناف شهرستان ". $city;
