@@ -93,19 +93,19 @@
             window.location.replace("{{ route('namayeshgah.form.add') }}");
         }
 
-    @if (auth()->user()->access('گزارش درگاه ثبت نام نمایشگاه عرضه مستقیم کالا'))
-        get_report()
+        @if (auth()->user()->access('گزارش درگاه ثبت نام نمایشگاه عرضه مستقیم کالا'))
+            get_report()
 
-        function get_report() {
-            send_ajax_get_request(
-                "{{ route('namayeshgahInfo.report.summary') }}",
-                function(res) {
-                    console.log(res);
-                    $('#all').html(res.all)
-                    $('#info').html(res.info)
-                }
-            )
-        }
+            function get_report() {
+                send_ajax_get_request(
+                    "{{ route('namayeshgahInfo.report.summary') }}",
+                    function(res) {
+                        console.log(res);
+                        $('#all').html(res.all)
+                        $('#info').html(res.info)
+                    }
+                )
+            }
         @endif
     </script>
 @endsection
