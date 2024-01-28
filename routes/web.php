@@ -25,7 +25,7 @@ Route::get('/import-user', function () {
     $rows->each(function(array $rowProperties){
         if($rowProperties['mobile']){
             print_r($rowProperties);
-            $user= User::where('email', $rowProperties['mobile'])->first();
+            $user= User::where('email', "'".$rowProperties['mobile']. "'")->first();
             // $user->enable = 0;
             // $user->save();
             print($user->enable);
