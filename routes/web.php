@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\Cities\Controllers\CityController;
+use Mkhodroo\ValueChain\Models\Isic;
 use Spatie\SimpleExcel\SimpleExcelReader;
 
 /*
@@ -20,36 +21,34 @@ use Spatie\SimpleExcel\SimpleExcelReader;
 |
 */
 Route::get('/import-user', function () {
-    $rows = SimpleExcelReader::create(public_path('Book2.xlsx'))->getRows();
+    $rows = SimpleExcelReader::create(public_path('Book4.xlsx'))->getRows();
     echo "<pre>";
     $rows->each(function(array $rowProperties){
-        if($rowProperties['mobile']){
-            print_r($rowProperties);
+        if($rowProperties['raste']){
+            // print_r($rowProperties);
             // $user= User::where('email', 'like', '%'.$rowProperties['mobile'])->first();
             // $user->enable = 0;
             // $user->save();
             // print($user->enable);
-            $province = $rowProperties['province'];
-            $city = $rowProperties['shahr'];
-            $name = "اتاق اصناف شهرستان ". $city;
-            $username = $rowProperties['mobile'];
-            $password = $username;
+            // $province = $rowProperties['province'];
+            // $city = $rowProperties['shahr'];
+            // $name = "اتاق اصناف شهرستان ". $city;
+            // $username = $rowProperties['mobile'];
+            // $password = $username;
             
-            $city_id = CityController::create($province, $city)->id;
+            // $city_id = CityController::create($province, $city)->id;
 
-            $user = User::create([
-                'name' => $name,
-                'email' => "$username",
-                'password' => Hash::make($password),
-                'city_id' => $city_id
+            $isic = Isic::create([
+                'name' => $rowProperties['raste'],
+                'isic' => $rowProperties['isic'],
             ]);
 
-            UserInfo::create([
-                'user_id' => $user->id,
-                'fname' => $rowProperties['name'],
-                'lname' => $rowProperties['lname'],
-                'mobile' => "$username",
-            ]);
+            // UserInfo::create([
+            //     'user_id' => $user->id,
+            //     'fname' => $rowProperties['name'],
+            //     'lname' => $rowProperties['lname'],
+            //     'mobile' => "$username",
+            // ]);
         }
     });
 });

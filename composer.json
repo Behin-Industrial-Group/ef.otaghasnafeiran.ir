@@ -29,7 +29,8 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/",
-            "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src/"
+            "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src/",
+            "Mkhodroo\\ValueChain\\": "packages/value-chains/src/"
         }
     },
     "autoload-dev": {
