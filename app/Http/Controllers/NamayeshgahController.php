@@ -89,6 +89,15 @@ class NamayeshgahController extends Controller
         return response(trans("file can not delete."), 402);
     }
 
+    public function delete(Request $r){
+        $row =Namayeshgah::where('id', $r->id)->where('user_id', Auth::id())->first();
+        if($row){
+            $row->delete();
+            return response(trans("namayeshgah deleted"));
+        }
+        return response(trans("namayeshgah can not delete"), 402);
+    }
+
     public function modal(Request $r){
         return view("dashboard.namayeshgah.$r->view")->with([
             'id' => $r->id,

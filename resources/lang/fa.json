@@ -66,5 +66,8 @@
     "at": "در",
     "Number of Added Namayeshgah With Info": "تعداد نمایشگاه های افزوده شده با اطلاعات",
     "Number of Added Namayeshgah": "تعداد کل نمایشگاه های افزوده شده",
-    "enable": "فعال"
+    "enable": "فعال",
+    "Are You Sure To Delete This Record?": "آیا از حذف این آیتم مطمئنید؟",
+    "namayeshgah can not delete": " نمایشگاه را نمیتوانید حذف کنید",
+    "namayeshgah deleted": "نمایشگاه حذف شد"
 }

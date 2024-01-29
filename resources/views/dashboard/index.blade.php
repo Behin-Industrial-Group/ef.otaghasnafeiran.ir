@@ -32,6 +32,9 @@
         </div>
     @endif
 
+    @if (auth()->user()->access("Add Namayeshgah Form"))
+        
+    @endif
     <div class="row">
         <div class="col-sm-12">
             <div class="header text-center ">
@@ -82,7 +85,9 @@
                         url = "{{ route('namayeshgah.form.edit', ['id' => 'id']) }}";
                         url = url.replace('id', item.id)
                         n.append(
-                            `<a href='${url}' class='btn btn-default col-sm-5 m-1' style="background: #A6CF98; color:white">ویرایش نمایشگاه <span dir='ltr'>${item.start_date}</span></button><br>`
+                            `<a href='${url}' class='btn btn-default col-sm-5 m-1' style="background: #A6CF98; color:white">ویرایش نمایشگاه <span dir='ltr'>${item.start_date}</span></button>
+                                <a onclick='delete_namayeshgah(${item.id})'><i class='fa fa-trash'></i></a>
+                                <br>`
                         )
                     })
                 }
@@ -91,6 +96,23 @@
 
         function go_to_add_form() {
             window.location.replace("{{ route('namayeshgah.form.add') }}");
+        }
+
+        function delete_namayeshgah(id){
+            fd = new FormData();
+            fd.append('id', id);
+            send_ajax_formdata_request_with_confirm(
+                "{{ route('namayeshgah.delete') }}",
+                fd,
+                function(res){
+                    show_message(res);
+                    location.reload()
+                },
+                function(res){
+                    show_error(res);
+                },
+                "{{ __('Are You Sure To Delete This Record?') }}"
+            )
         }
 
         @if (auth()->user()->access('گزارش درگاه ثبت نام نمایشگاه عرضه مستقیم کالا'))

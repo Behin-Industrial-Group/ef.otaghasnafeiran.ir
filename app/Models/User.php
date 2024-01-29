@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Mkhodroo\Cities\Controllers\CityController;
 use Mkhodroo\UserRoles\Controllers\AccessController;
 
 class User extends Authenticatable
@@ -49,5 +50,10 @@ class User extends Authenticatable
 
     function access($method_name) {
         return (new AccessController($method_name))->check();
+    }
+
+    function city(){
+        $city = CityController::getById($this->city_id);
+        return  $city->province .' '. $city->city;
     }
 }
