@@ -37,7 +37,7 @@ class NamayeshgahController extends Controller
             'pr_mobile' => 'digits:11',
             'pr_phone' => 'digits:11',
             'excutive_director_mobile' => 'digits:11',
-            'performancer_nid' => 'digits:10',
+            'performancer_nid' => 'digits_between:10,11',
             'performancer_mobile' => 'digits:11',
             'number_of_booth1' => 'numeric',
             'meterage_of_booth1' => 'numeric',

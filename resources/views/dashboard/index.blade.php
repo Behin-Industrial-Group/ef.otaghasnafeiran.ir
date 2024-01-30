@@ -32,42 +32,41 @@
         </div>
     @endif
 
-    @if (auth()->user()->access("Add Namayeshgah Form"))
-        
-    @endif
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="header text-center ">
-                <h3>
-                </h3>
-            </div>
-            <div class="body">
-                <div class="card card-primary">
-                    <div class="card-header text-center " style="background: #557C55">
-                        <h3 class="card-title">
-                            درگاه ثبت نام نمایشگاه های عرضه مستقیم کالا عید تا عید
-                        </h3>
-                    </div>
-
-                    <div class="card-body p-0">
-
-                        <div class="">
-                            <img src="public/eid.png?{{ config('app.version') }}" alt="" width="100%">
+    @if (auth()->user()->access('Add Namayeshgah Form'))
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="header text-center ">
+                    <h3>
+                    </h3>
+                </div>
+                <div class="body">
+                    <div class="card card-primary">
+                        <div class="card-header text-center " style="background: #557C55">
+                            <h3 class="card-title">
+                                درگاه ثبت نام نمایشگاه های عرضه مستقیم کالا عید تا عید
+                            </h3>
                         </div>
-                        <hr>
 
-                        <div id="namayeshgah" class="text-center">
-                            <button class="btn btn-default" onclick="go_to_add_form()"
-                                style="background: #557C55; color:white">افزودن نمایشگاه</button>
+                        <div class="card-body p-0">
+
+                            <div class="">
+                                <img src="public/eid.png?{{ config('app.version') }}" alt="" width="100%">
+                            </div>
                             <hr>
+
+                            <div id="namayeshgah" class="text-center">
+                                <button class="btn btn-default" onclick="go_to_add_form()"
+                                    style="background: #557C55; color:white">افزودن نمایشگاه</button>
+                                <hr>
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
+    @endif
 @endsection
 
 @section('script')
@@ -98,17 +97,17 @@
             window.location.replace("{{ route('namayeshgah.form.add') }}");
         }
 
-        function delete_namayeshgah(id){
+        function delete_namayeshgah(id) {
             fd = new FormData();
             fd.append('id', id);
             send_ajax_formdata_request_with_confirm(
                 "{{ route('namayeshgah.delete') }}",
                 fd,
-                function(res){
+                function(res) {
                     show_message(res);
                     location.reload()
                 },
-                function(res){
+                function(res) {
                     show_error(res);
                 },
                 "{{ __('Are You Sure To Delete This Record?') }}"

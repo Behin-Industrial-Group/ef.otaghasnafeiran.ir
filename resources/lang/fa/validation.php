@@ -43,7 +43,7 @@ return [
     'declined_if' => 'The :attribute field must be declined when :other is :value.',
     'different' => 'The :attribute field and :other must be different.',
     'digits' => ':attribute باید :digits رقم باشد',
-    'digits_between' => ':attribute باید عدد انگلیسی بین 10 تا 11 رقم باشد',
+    'digits_between' => ':attribute باید عدد انگلیسی بین :min و :max باشد',
     'dimensions' => 'The :attribute field has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
     'doesnt_end_with' => 'The :attribute field must not end with one of the following: :values.',
