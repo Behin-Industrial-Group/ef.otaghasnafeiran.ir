@@ -1,7 +1,7 @@
 <div class="row">
-    {{-- <div class="col-sm-6">
+    <div class="col-sm-6">
         <h4>{{ _('User Info') }}</h4><hr>
-        <form action="javascript:void()" id="user-form">
+        {{-- <form action="javascript:void()" id="user-form">
             @csrf
             @foreach ($user as $key => $value)
                 <label for="">{{ __($key) }}</label>
