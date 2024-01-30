@@ -20,7 +20,7 @@ use Spatie\SimpleExcel\SimpleExcelReader;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-/*
+
 Route::get('/import-user', function () {
     $rows = SimpleExcelReader::create(public_path('Book4.xlsx'))->getRows();
     echo "<pre>";
@@ -81,4 +81,3 @@ require __DIR__.'/auth.php';
 require __DIR__.'/dashboard.php';
 require __DIR__.'/namayeshgah.php';
 require __DIR__.'/download.php';
-/*
