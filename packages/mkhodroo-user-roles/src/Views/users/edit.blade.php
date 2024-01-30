@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6">
-        <h4>{{ _('User Info') }}</h4><hr>
-        {{-- <form action="javascript:void()" id="user-form">
+        <h4>{{ __('User Info') }}</h4><hr>
+        <form action="javascript:void()" id="user-form">
             @csrf
             @foreach ($user as $key => $value)
                 <label for="">{{ __($key) }}</label>
@@ -13,7 +13,7 @@
         <button class="btn btn-success" onclick="edit_user()">submit</button>
     </div>
     <div class="col-sm-6">
-        <h4>{{ _('Profile') }}</h4><hr>
+        <h4>{{ __('Profile') }}</h4><hr>
         <form action="javascript:void()" id="info-form">
             @csrf
             @foreach ($user_info as $key => $value)
@@ -23,7 +23,7 @@
             @endforeach
         </form>
         <button class="btn btn-success" onclick="edit_profile()">submit</button>
-    </div> --}}
+    </div>
 
 
 
