@@ -3,11 +3,11 @@
         <h4>{{ _('User Info') }}</h4><hr>
         <form action="javascript:void()" id="user-form">
             @csrf
-            @foreach ($user as $key => $value)
+            {{-- @foreach ($user as $key => $value)
                 <label for="">{{ __($key) }}</label>
                 <input type="text" name="{{ $key }}" id="" value="{{ $value }}"
                     class="form-control">
-            @endforeach
+            @endforeach --}}
 
         </form>
         <button class="btn btn-success" onclick="edit_user()">submit</button>
