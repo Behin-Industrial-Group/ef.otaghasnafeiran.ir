@@ -15,9 +15,9 @@
             id="exampleInputPassword1" placeholder="نام خانوادگی مجری">
     </div>
     <div class="form-group col-sm-8">
-        <label for="exampleInputPassword1">کدملی مجری: </label>
+        <label for="exampleInputPassword1">کدملی یا شنناسه ملی مجری: </label>
         <input type="text" name="performancer_nid" class="form-control" dir="ltr"
-            id="exampleInputPassword1" placeholder="کدملی مجری">
+            id="exampleInputPassword1" placeholder="">
     </div>
     <div class="form-group col-sm-8">
         <label for="exampleInputPassword1">تلفن همراه مجری: </label>
