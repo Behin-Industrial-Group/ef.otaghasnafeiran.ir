@@ -6,6 +6,7 @@
             <thead>
                 <tr>
                     <th>{{ __('id') }}</th>
+                    <th>{{ __('province') }}</th>
                     <th>{{ __('username') }}</th>
                     <th>{{ __('mobile') }}</th>
                     <th>{{ __('start_date') }}</th>
@@ -25,6 +26,9 @@
             "{{route('namayeshgahInfo.list')}}",
             [
                 {data: 'id'},
+                {data: 'user', render: function(data){
+                    return data.province
+                }},
                 {data: 'user', render: function(data){
                     return data.name
                 }},

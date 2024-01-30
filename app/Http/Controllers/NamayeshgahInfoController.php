@@ -17,6 +17,7 @@ class NamayeshgahInfoController extends Controller
         return [
             'data' => Namayeshgah::get()->each(function($row){
                 $row->user = User::find($row->user_id);
+                $row->user->province = CityController::getById($row->user->city_id)?->province;
             })
         ];
     }
