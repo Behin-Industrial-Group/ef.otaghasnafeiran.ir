@@ -12,6 +12,7 @@
                     <th>{{ __('start_date') }}</th>
                     <th>{{ __('end_date') }}</th>
                     <th>{{ __('created_at') }}</th>
+                    <th>{{ __('action') }}</th>
                 </tr>
             </thead>
         </table>
@@ -42,6 +43,9 @@
                     date = datetime.toLocaleDateString('fa-IR');
                     time = datetime.toLocaleTimeString('fa-IR');
                     return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
+                }},
+                {data: 'id', render: function(data){
+                    return `<a onclick='delete_namayeshgah(${data})'><i class='fa fa-trash'></i></a>`;
                 }}
             ]
         )
@@ -65,6 +69,22 @@
                 function(res){
                     open_admin_modal_with_data(res)
                 }
+            )
+        }
+        function delete_namayeshgah(id) {
+            fd = new FormData();
+            fd.append('id', id);
+            send_ajax_formdata_request_with_confirm(
+                "{{ route('namayeshgah.deleteForAdmin') }}",
+                fd,
+                function(res) {
+                    show_message(res);
+                    location.reload()
+                },
+                function(res) {
+                    show_error(res);
+                },
+                "{{ __('Are You Sure To Delete This Record?') }}"
             )
         }
     </script>

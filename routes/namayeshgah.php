@@ -24,6 +24,7 @@ Route::name('namayeshgah.')->prefix('namayeshgah')->middleware(['auth'])->group(
     Route::get('get-mine', [NamayeshgahController::class, 'getMine'])->name('getMine');
     Route::post('add', [NamayeshgahController::class, 'add'])->name('add');
     Route::post('delete-namayeshgah', [NamayeshgahController::class, 'delete'])->name('delete');
+    Route::post('delete-namayeshgah-for-admin', [NamayeshgahController::class, 'deleteForAdmin'])->name('deleteForAdmin');
     Route::post('delete-file', [NamayeshgahController::class, 'deleteFile'])->name('deleteFile');
 });
 

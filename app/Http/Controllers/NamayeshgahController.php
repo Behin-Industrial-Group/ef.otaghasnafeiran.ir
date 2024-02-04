@@ -98,6 +98,20 @@ class NamayeshgahController extends Controller
         return response(trans("namayeshgah can not delete"), 402);
     }
 
+    public function deleteForAdmin(Request $r){
+        $row =Namayeshgah::where('id', $r->id)->first();
+        foreach(collect($row) as $key => $value){
+            if($value && !in_array($key, ['id', 'user_id', 'created_at', 'updated_at'])){
+                return response(trans("This Record Has Data"), 402);
+            }
+        }
+        if($row){
+            $row->delete();
+            return response(trans("namayeshgah deleted"));
+        }
+        return response(trans("namayeshgah can not delete"), 402);
+    }
+
     public function modal(Request $r){
         return view("dashboard.namayeshgah.$r->view")->with([
             'id' => $r->id,
