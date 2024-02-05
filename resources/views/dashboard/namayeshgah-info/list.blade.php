@@ -45,7 +45,11 @@
                     return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
                 }},
                 {data: 'id', render: function(data){
+                    @if(auth()->user()->access('حذف نمایشگاه ثبت شده توسط ادمین'))
                     return `<a onclick='delete_namayeshgah(${data})'><i class='fa fa-trash'></i></a>`;
+                    @else
+                    return '';
+                    @endif
                 }}
             ]
         )
