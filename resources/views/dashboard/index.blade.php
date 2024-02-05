@@ -23,6 +23,9 @@
                             <div class="col-sm-6">
                                 {{ __('Number of Added Namayeshgah With Info') }}: <span id="info"></span>
                             </div>
+                            <div class="col-sm-6">
+                                <a class="" href="http://pmaker.altfuel.ir:575/otagh_nayeshgah_report.pdf" >دانلود گزارش</a>
+                            </div>
 
                         </div>
 
