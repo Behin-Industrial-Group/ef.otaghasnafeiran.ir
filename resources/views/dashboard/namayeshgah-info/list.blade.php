@@ -11,6 +11,10 @@
                     <th>{{ __('mobile') }}</th>
                     <th>{{ __('start_date') }}</th>
                     <th>{{ __('end_date') }}</th>
+                    <th>{{ __('performancer_name') }}</th>
+                    <th>{{ __('performancer_lname') }}</th>
+                    <th>{{ __('performancer_nid') }}</th>
+                    <th>{{ __('performancer_mobile') }}</th>
                     <th>{{ __('created_at') }}</th>
                     <th>{{ __('action') }}</th>
                 </tr>
@@ -38,6 +42,10 @@
                 }},
                 {data: 'start_date'},
                 {data: 'end_date'},
+                {data: 'performancer_name'},
+                {data: 'performancer_lname'},
+                {data: 'performancer_nid'},
+                {data: 'performancer_mobile'},
                 {data: 'created_at', render:function(data){
                     datetime = new Date(data);
                     date = datetime.toLocaleDateString('fa-IR');
