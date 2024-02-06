@@ -16,6 +16,7 @@
                     <th>{{ __('performancer_nid') }}</th>
                     <th>{{ __('performancer_mobile') }}</th>
                     <th>{{ __('price_file') }}</th>
+                    <th>{{ __('performancer_deal') }}</th>
                     <th>{{ __('created_at') }}</th>
                     <th>{{ __('action') }}</th>
                 </tr>
@@ -48,6 +49,13 @@
                 {data: 'performancer_nid'},
                 {data: 'performancer_mobile'},
                 {data: 'price_file', render: function(data){
+                    if(data){
+                        return `<a href='${data}'>download</a>`
+                    }else{
+                        return 'ندارد'
+                    }
+                }},
+                {data: 'performancer_deal', render: function(data){
                     if(data){
                         return `<a href='${data}'>download</a>`
                     }else{
