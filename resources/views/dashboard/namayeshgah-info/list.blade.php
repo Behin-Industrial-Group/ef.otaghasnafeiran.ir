@@ -15,6 +15,7 @@
                     <th>{{ __('performancer_lname') }}</th>
                     <th>{{ __('performancer_nid') }}</th>
                     <th>{{ __('performancer_mobile') }}</th>
+                    <th>{{ __('price_file') }}</th>
                     <th>{{ __('created_at') }}</th>
                     <th>{{ __('action') }}</th>
                 </tr>
@@ -46,6 +47,13 @@
                 {data: 'performancer_lname'},
                 {data: 'performancer_nid'},
                 {data: 'performancer_mobile'},
+                {data: 'price_file', render: function(data){
+                    if(data){
+                        return `<a href='${data}'>download</a>`
+                    }else{
+                        return 'ندارد'
+                    }
+                }},
                 {data: 'created_at', render:function(data){
                     datetime = new Date(data);
                     date = datetime.toLocaleDateString('fa-IR');
