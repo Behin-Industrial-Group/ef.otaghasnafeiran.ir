@@ -28,24 +28,24 @@ Route::get('/import-user', function () {
     // $newExcel = SimpleExcelWriter::create(public_path('newExcel.xlsx'));
     echo "<pre>";
     $rows->each(function (array $rowProperties){
-        print_r($rowProperties);
-        $province = $rowProperties['province'];
-        $name = "وزارت صمت استان " . $province;
-        $username = $rowProperties['mobile'];
-        $password = $username;
-        // $city_id = CityController::create($province, $city)->id;
-        $user = User::create([
-            'name' => $name,
-            'email' => "$username",
-            'password' => Hash::make($password),
-            'role_id' => 7
-            // 'city_id' => $city_id
-        ]);
-        UserInfo::create([
-            'user_id' => $user->id,
-            'fname' => $rowProperties['name'],
-            'mobile' => "$username",
-        ]);
+        // print_r($rowProperties);
+        // $province = $rowProperties['province'];
+        // $name = "وزارت صمت استان " . $province;
+        // $username = $rowProperties['mobile'];
+        // $password = $username;
+        // // $city_id = CityController::create($province, $city)->id;
+        // $user = User::create([
+        //     'name' => $name,
+        //     'email' => "$username",
+        //     'password' => Hash::make($password),
+        //     'role_id' => 7
+        //     // 'city_id' => $city_id
+        // ]);
+        // UserInfo::create([
+        //     'user_id' => $user->id,
+        //     'fname' => $rowProperties['name'],
+        //     'mobile' => "$username",
+        // ]);
         // for ($i = 3; $i < 29; $i++) {
         //     $str = str_replace("(", "", $rowProperties[$i]);
         //     $str = str_replace(")", "", $rowProperties[$i]);

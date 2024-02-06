@@ -25,7 +25,7 @@ class NamayeshgahInfoController extends Controller
     public function editForm($id, NamayeshgahController $nc){
         $data = $nc->getById($id);
         return view('dashboard.namayeshgah-info.edit')->with([
-            'data' => collect($data)
+            'data' => $data
         ]);
     }
 
