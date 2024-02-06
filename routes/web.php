@@ -30,7 +30,7 @@ Route::get('/import-user', function () {
     $rows->each(function (array $rowProperties){
         print_r($rowProperties);
         $province = $rowProperties['province'];
-        $name = "رئیس کل وزارت صمت استان " . $province;
+        $name = "وزارت صمت استان " . $province;
         $username = $rowProperties['mobile'];
         $password = $username;
         // $city_id = CityController::create($province, $city)->id;
