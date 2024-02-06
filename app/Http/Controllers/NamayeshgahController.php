@@ -51,6 +51,7 @@ class NamayeshgahController extends Controller
             'number_of_booth4' => 'numeric',
             'meterage_of_booth4' => 'numeric',
             'price_of_booth4_per_meter' => 'numeric',
+            'performancer_deal' => 'extensions:pdf',
             'price_file' => 'extensions:xlsx',
             'place_checklist_file' => 'extensions:pdf,xlsx',
             'booth_checklist_file' => 'extensions:pdf,xlsx',
@@ -58,6 +59,7 @@ class NamayeshgahController extends Controller
         ]);
         $data = $r->all();
         $data['user_id'] = Auth::id();
+        $data['performancer_deal'] = $r->file('performancer_deal') ? UploadController::inPublicFolder($r->file('performancer_deal')) : null;
         $data['price_file'] = $r->file('price_file') ? UploadController::inPublicFolder($r->file('price_file')) : null;
         $data['place_checklist_file'] = $r->file('place_checklist_file') ? UploadController::inPublicFolder($r->file('place_checklist_file')) : null;
         $data['booth_checklist_file'] = $r->file('booth_checklist_file') ? UploadController::inPublicFolder($r->file('booth_checklist_file')) : null;

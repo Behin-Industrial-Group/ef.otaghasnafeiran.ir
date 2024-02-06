@@ -24,6 +24,24 @@
         <input type="text" name="performancer_mobile" class="form-control" dir="ltr"
             id="exampleInputPassword1" placeholder="تلفن همراه مجری">
     </div>
+    <div class="form-group">
+        <label for="exampleInputFile">قرارداد با مجری</label>
+        <div class="input-group">
+            <div class="custom-file">
+                @isset($data['performancer_deal'])
+                    <button class="btn btn-default">
+                        <a href="{{ $data['performancer_deal'] }}" target="_blank">دانلود</a>
+                    </button>
+                    <button class="fa fa-trash btn btn-danger"
+                        onclick="delete_file({{ $data['id'] }}, 'performancer_deal')"></button>
+                @else
+                    <input type="file" name="performancer_deal" class="custom-file-input"
+                        id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
+                @endisset
+            </div>
+        </div>
+    </div>
 </form>
 <button class="btn btn-primary" onclick="submit('modal_form')">ثبت</button>
 <script>
