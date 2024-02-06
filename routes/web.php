@@ -23,11 +23,11 @@ use Spatie\SimpleExcel\SimpleExcelWriter;
 */
 
 Route::get('/import-user', function () {
-    $rows = SimpleExcelReader::create(public_path('cat2.xlsx'))->getRows();
+    // $rows = SimpleExcelReader::create(public_path('cat2.xlsx'))->getRows();
     $rows = SimpleExcelReader::create(public_path('Book13.xlsx'))->getRows();
-    $newExcel = SimpleExcelWriter::create(public_path('newExcel.xlsx'));
+    // $newExcel = SimpleExcelWriter::create(public_path('newExcel.xlsx'));
     echo "<pre>";
-    $rows->each(function (array $rowProperties) use ($newExcel) {
+    $rows->each(function (array $rowProperties){
         print_r($rowProperties);
         $province = $rowProperties['province'];
         $name = "رئیس کل وزارت صمت استان " . $province;
