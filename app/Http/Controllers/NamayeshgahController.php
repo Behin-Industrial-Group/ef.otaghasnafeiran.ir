@@ -59,11 +59,40 @@ class NamayeshgahController extends Controller
         ]);
         $data = $r->all();
         $data['user_id'] = Auth::id();
-        $data['performancer_deal'] = $r->file('performancer_deal') ? UploadController::inPublicFolder($r->file('performancer_deal')) : null;
-        $data['price_file'] = $r->file('price_file') ? UploadController::inPublicFolder($r->file('price_file')) : null;
-        $data['place_checklist_file'] = $r->file('place_checklist_file') ? UploadController::inPublicFolder($r->file('place_checklist_file')) : null;
-        $data['booth_checklist_file'] = $r->file('booth_checklist_file') ? UploadController::inPublicFolder($r->file('booth_checklist_file')) : null;
-        $data['performance_checklist_file'] = $r->file('performance_checklist_file') ? UploadController::inPublicFolder($r->file('performance_checklist_file')) : null;
+        if($r->file('performancer_deal')){
+            $data['performancer_deal'] = UploadController::inPublicFolder($r->file('performancer_deal'));
+        }else{
+            unset($data['performancer_deal']);
+        }
+
+        if($r->file('price_file')){
+            $data['price_file'] = UploadController::inPublicFolder($r->file('price_file'));
+        }else{
+            unset($data['price_file']);
+        }
+
+        if($r->file('place_checklist_file')){
+            $data['place_checklist_file'] = UploadController::inPublicFolder($r->file('place_checklist_file'));
+        }else{
+            unset($data['place_checklist_file']);
+        }
+
+        if($r->file('booth_checklist_file')){
+            $data['booth_checklist_file'] = UploadController::inPublicFolder($r->file('booth_checklist_file'));
+        }else{
+            unset($data['booth_checklist_file']);
+        }
+
+        if($r->file('performance_checklist_file')){
+            $data['performance_checklist_file'] = UploadController::inPublicFolder($r->file('performance_checklist_file'));
+        }else{
+            unset($data['performance_checklist_file']);
+        }
+        // $data['performancer_deal'] = $r->file('performancer_deal') ? UploadController::inPublicFolder($r->file('performancer_deal')) : null;
+        // $data['price_file'] = $r->file('price_file') ? UploadController::inPublicFolder($r->file('price_file')) : null;
+        // $data['place_checklist_file'] = $r->file('place_checklist_file') ? UploadController::inPublicFolder($r->file('place_checklist_file')) : null;
+        // $data['booth_checklist_file'] = $r->file('booth_checklist_file') ? UploadController::inPublicFolder($r->file('booth_checklist_file')) : null;
+        // $data['performance_checklist_file'] = $r->file('performance_checklist_file') ? UploadController::inPublicFolder($r->file('performance_checklist_file')) : null;
 
         if(isset($r->id)){
             Namayeshgah::where('id', $r->id)->update($data);
