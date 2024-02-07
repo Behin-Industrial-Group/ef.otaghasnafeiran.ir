@@ -51,7 +51,7 @@ class NamayeshgahController extends Controller
             'number_of_booth4' => 'numeric',
             'meterage_of_booth4' => 'numeric',
             'price_of_booth4_per_meter' => 'numeric',
-            'performancer_deal' => 'extensions:pdf',
+            // 'performancer_deal' => 'extensions:pdf',
             'price_file' => 'extensions:xlsx',
             'place_checklist_file' => 'extensions:pdf,xlsx',
             'booth_checklist_file' => 'extensions:pdf,xlsx',
