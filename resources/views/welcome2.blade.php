@@ -348,7 +348,7 @@
                 @csrf
                 <input type="text" class="form__input" name="email" id="email" placeholder="{{__('mobile')}}" autocomplete="off" readonly>
                 <input type="number" class="form__input" name="password" placeholder="{{__('sended code')}}" autocomplete="off">
-                <button onclick="submit()" class="form__button button submit" >{{__('Log in')}}</button>
+                <button onclick="submit()" class="form__button button" id="submit">{{__('Log in')}}</button>
             </form>
         </div>
         <div class="container b-container" id="b-container">
@@ -471,6 +471,10 @@
                 }
             )
         }
+        $('#submit').on('click', function(){
+            submit()
+        })
+
     </script>
 </body>
 
