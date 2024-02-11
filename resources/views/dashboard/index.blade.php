@@ -52,15 +52,17 @@
 
                         <div class="card-body p-0">
 
-                            <div class="">
-                                <img src="public/eid.png?{{ config('app.version') }}" alt="" width="100%">
-                            </div>
-                            <hr>
-
-                            <div id="namayeshgah" class="text-center">
-                                <button class="btn btn-default" onclick="go_to_add_form()"
-                                    style="background: #557C55; color:white">افزودن نمایشگاه</button>
-                                <hr>
+                            <div class="row">
+                                <div id="namayeshgah" class="text-center col-sm-6">
+                                    <button class="btn btn-default" onclick="go_to_add_form()"
+                                        style="background: #557C55; color:white">افزودن نمایشگاه</button>
+                                    <hr>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="public/eid2.png?{{ config('app.version') }}" alt="" width="100%">
+                                </div>
+    
+                                
                             </div>
 
                         </div>
