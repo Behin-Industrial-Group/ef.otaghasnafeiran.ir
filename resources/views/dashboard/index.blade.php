@@ -24,7 +24,7 @@
                                 {{ __('Number of Added Namayeshgah With Info') }}: <span id="info"></span>
                             </div>
                             <div class="col-sm-6">
-                                <a class="" target="_" href="http://pmaker.altfuel.ir:575/otagh_nayeshgah_report.pdf" >دانلود گزارش</a>
+                                {{-- <a class="" target="_" href="http://pmaker.altfuel.ir:575/otagh_nayeshgah_report.pdf" >دانلود گزارش</a> --}}
                                 <a href="{{ route('download.fromPublicFolder', ['name' => 'otagh_nayeshgah_report.pdf']) }}"
                                     target="_blank">
                                     {{__('Download Report')}}
