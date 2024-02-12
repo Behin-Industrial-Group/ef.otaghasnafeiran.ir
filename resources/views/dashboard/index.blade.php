@@ -16,7 +16,7 @@
                             </h3>
                         </div>
 
-                        <div class="card-body p-0 row" dir="auto">
+                        <div class="card-body p-1 row" dir="auto">
                             <div class="col-sm-6" dir="auto">
                                 {{ __('Number of Added Namayeshgah') }}: <span id="all"></span>
                             </div>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-sm-6">
                                 {{-- <a class="" target="_" href="http://pmaker.altfuel.ir:575/otagh_nayeshgah_report.pdf" >دانلود گزارش</a> --}}
-                                <a href="{{ route('download.fromPublicFolder', ['name' => 'otagh_nayeshgah_report.pdf']) }}"
+                                <a class="btn btn-info" href="{{ route('download.fromPublicFolder', ['name' => 'otagh_nayeshgah_report.pdf']) }}"
                                     target="_blank">
                                     {{__('Download Report')}}
                                 </a>
