@@ -53,9 +53,9 @@ class NamayeshgahController extends Controller
             'price_of_booth4_per_meter' => 'numeric',
             'performancer_deal' => 'extensions:pdf',
             'price_file' => 'extensions:xlsx',
-            'place_checklist_file' => 'extensions:pdf,xlsx',
-            'booth_checklist_file' => 'extensions:pdf,xlsx',
-            'performance_checklist_file' => 'extensions:pdf,xlsx'
+            'place_checklist_file' => 'extensions:pdf,xlsx,jpg,png,jpeg',
+            'booth_checklist_file' => 'extensions:pdf,xlsx,jpg,png,jpeg',
+            'performance_checklist_file' => 'extensions:pdf,xlsx,jpg,png,jpeg'
         ]);
         $data = $r->all();
         $data['user_id'] = Auth::id();
