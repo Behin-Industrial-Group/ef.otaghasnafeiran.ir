@@ -63,7 +63,7 @@
                                     <hr>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="public/eid2.png?{{ config('app.version') }}" alt="" width="100%">
+                                    <img src="public/eid3.png?{{ config('app.version') }}" alt="" width="100%">
                                 </div>
     
                                 

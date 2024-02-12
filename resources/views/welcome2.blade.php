@@ -371,7 +371,7 @@
             <div class="switch__circle"></div>
             <div class="switch__circle switch__circle--t"></div>
             <div class="switch__container" id="switch-c1">
-                <img src="{{url('public/eid2.png')}}?{{config('app.version')}}" alt="" style="position: relative; width:100%">
+                <img src="{{url('public/eid3.png')}}?{{config('app.version')}}" alt="" style="position: relative; width:100%">
             </div>
             <div class="switch__container is-hidden" id="switch-c2">
                 <h2 class="switch__title title">Hello Friend !</h2>
