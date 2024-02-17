@@ -29,6 +29,7 @@ class NamayeshgahInfoController extends Controller
         ->select(DB::raw('* , count(*) as count'))
         ->groupBy('cities.province')
         ->get();
+        return $data->whereNotNull('start_date');
         return $data;
         return [
             'labels' => ''

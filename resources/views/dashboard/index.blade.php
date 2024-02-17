@@ -31,11 +31,6 @@
                                     {{ __('Download Report') }}
                                 </a>
                             </div>
-                            <div>
-                                <canvas id="barChart"
-                                    style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 368px;"
-                                    width="460" height="312" class="chartjs-render-monitor"></canvas>
-                            </div>
 
                         </div>
 
@@ -139,61 +134,58 @@
                         console.log(res);
                         $('#all').html(res.all)
                         $('#info').html(res.info)
-                        var label = [];
-                        var numberOfRegister = [];
-                        var numberOfCompelete = [];
-                        res.data.forEach(function(item) {
-                            label.push(item.province)
-                            numberOfRegister.push(item.count)
-                            numberOfCompelete.push(item.count - 1)
-                        })
-                        console.log(label)
-                        console.log(numberOfCompelete)
-                        console.log(numberOfRegister)
-                        var areaChartData = {
-                            labels: label,
-                            datasets: [{
-                                    label: '{{ __('Compeleted') }}',
-                                    backgroundColor: 'rgba(60,141,188,0.9)',
-                                    borderColor: 'rgba(60,141,188,0.8)',
-                                    pointRadius: false,
-                                    pointColor: '#3b8bba',
-                                    pointStrokeColor: 'rgba(60,141,188,1)',
-                                    pointHighlightFill: '#fff',
-                                    pointHighlightStroke: 'rgba(60,141,188,1)',
-                                    data: numberOfCompelete
-                                },
-                                {
-                                    label: '{{ __('All') }}',
-                                    backgroundColor: 'rgba(210, 214, 222, 1)',
-                                    borderColor: 'rgba(210, 214, 222, 1)',
-                                    pointRadius: false,
-                                    pointColor: 'rgba(210, 214, 222, 1)',
-                                    pointStrokeColor: '#c1c7d1',
-                                    pointHighlightFill: '#fff',
-                                    pointHighlightStroke: 'rgba(220,220,220,1)',
-                                    data: numberOfRegister
-                                },
-                            ]
-                        }
+                        // var label = [];
+                        // var numberOfRegister = [];
+                        // var numberOfCompelete = [];
+                        // res.data.forEach(function(item) {
+                        //     label.push(item.province)
+                        //     numberOfRegister.push(item.count)
+                        //     numberOfCompelete.push(item.count - 1)
+                        // })
+                        // var areaChartData = {
+                        //     labels: label,
+                        //     datasets: [{
+                        //             label: '{{ __('Compeleted') }}',
+                        //             backgroundColor: 'rgba(60,141,188,0.9)',
+                        //             borderColor: 'rgba(60,141,188,0.8)',
+                        //             pointRadius: false,
+                        //             pointColor: '#3b8bba',
+                        //             pointStrokeColor: 'rgba(60,141,188,1)',
+                        //             pointHighlightFill: '#fff',
+                        //             pointHighlightStroke: 'rgba(60,141,188,1)',
+                        //             data: numberOfCompelete
+                        //         },
+                        //         {
+                        //             label: '{{ __('All') }}',
+                        //             backgroundColor: 'rgba(210, 214, 222, 1)',
+                        //             borderColor: 'rgba(210, 214, 222, 1)',
+                        //             pointRadius: false,
+                        //             pointColor: 'rgba(210, 214, 222, 1)',
+                        //             pointStrokeColor: '#c1c7d1',
+                        //             pointHighlightFill: '#fff',
+                        //             pointHighlightStroke: 'rgba(220,220,220,1)',
+                        //             data: numberOfRegister
+                        //         },
+                        //     ]
+                        // }
 
-                        var barChartCanvas = $('#barChart').get(0).getContext('2d')
-                        var barChartData = $.extend(true, {}, areaChartData)
-                        var temp0 = areaChartData.datasets[0]
-                        var temp1 = areaChartData.datasets[1]
-                        barChartData.datasets[0] = temp1
-                        barChartData.datasets[1] = temp0
+                        // var barChartCanvas = $('#barChart').get(0).getContext('2d')
+                        // var barChartData = $.extend(true, {}, areaChartData)
+                        // var temp0 = areaChartData.datasets[0]
+                        // var temp1 = areaChartData.datasets[1]
+                        // barChartData.datasets[0] = temp1
+                        // barChartData.datasets[1] = temp0
 
-                        var barChartOptions = {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            datasetFill: false
-                        }
-                        new Chart(barChartCanvas, {
-                            type: 'bar',
-                            data: barChartData,
-                            options: barChartOptions
-                        })
+                        // var barChartOptions = {
+                        //     responsive: true,
+                        //     maintainAspectRatio: false,
+                        //     datasetFill: false
+                        // }
+                        // new Chart(barChartCanvas, {
+                        //     type: 'bar',
+                        //     data: barChartData,
+                        //     options: barChartOptions
+                        // })
                     }
                 )
             }
