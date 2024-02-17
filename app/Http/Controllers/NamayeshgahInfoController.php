@@ -48,7 +48,7 @@ class NamayeshgahInfoController extends Controller
         return [
             'all' => $all->count(),
             'info' => $all->whereNotNull('start_date')->count(),
-            'data' => $this->NumberOfNamayeshgahPerProvince()
+            // 'data' => $this->NumberOfNamayeshgahPerProvince()
         ];
     }
 }
