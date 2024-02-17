@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Namayeshgah;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Mkhodroo\Cities\Controllers\CityController;
 
 class NamayeshgahInfoController extends Controller
@@ -22,6 +23,18 @@ class NamayeshgahInfoController extends Controller
         ];
     }
 
+    public function NumberOfNamayeshgahPerProvince(){
+        $data = Namayeshgah::join('users', 'namayeshgah.user_id', '=', 'users.id')
+        ->join('cities', 'users.city_id', '=', 'cities.id')
+        ->select(DB::raw('* , count(*) as count'))
+        ->groupBy('cities.province')
+        ->get();
+        return $data;
+        return [
+            'labels' => ''
+        ];
+    }
+
     public function editForm($id, NamayeshgahController $nc){
         $data = $nc->getById($id);
         return view('dashboard.namayeshgah-info.edit')->with([
@@ -34,6 +47,7 @@ class NamayeshgahInfoController extends Controller
         return [
             'all' => $all->count(),
             'info' => $all->whereNotNull('start_date')->count(),
+            'data' => $this->NumberOfNamayeshgahPerProvince()
         ];
     }
 }
