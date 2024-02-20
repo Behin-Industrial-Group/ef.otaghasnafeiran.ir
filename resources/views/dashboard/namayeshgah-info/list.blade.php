@@ -87,10 +87,26 @@
                     }
                 },
                 {
-                    data: 'start_date'
+                    data: 'start_date', render: function(data){
+                        if(data){
+                            data = data.replace('-', '/')
+                            data = data.replace('-', '/')
+                            return data;
+                        }
+                        return data;
+                        
+                    }
                 },
                 {
-                    data: 'end_date'
+                    data: 'end_date', render: function(data){
+                        if(data){
+                            data = data.replace('-', '/')
+                            data = data.replace('-', '/')
+                            return data;
+                        }
+                        return data;
+                        
+                    }
                 },
                 @if (auth()->user()->access('نمایش اطلاعات مجری'))
                     {
