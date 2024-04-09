@@ -87,7 +87,7 @@ class AuthenticatedSessionController extends Controller
         $text = "کد یکبار مصرف جهت ورود به سامانه اتاق اصناف: $code";
         // $sms->send('09376922176', $text);
         $sms->send($mobile, $text);
-        // $smsir = new Smsir(env('SMSIR_LINE_NUMBER'), env('SMSIR_API_KEY'));
+        $smsir = new Smsir(env('SMSIR_LINE_NUMBER'), env('SMSIR_API_KEY'));
         // $send = $smsir->Send();
         // $parameter = new \Cryptommer\Smsir\Objects\Parameters('code', $code);
         // $parameters = array($parameter) ;
