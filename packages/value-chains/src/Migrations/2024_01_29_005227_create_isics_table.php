@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('isics', function (Blueprint $table) {
-            $table->id();
-            $table->string('name',255);
-            $table->string('isic')->nullable();
-            $table->string('national_unique_code')->nullable();
-            $table->timestamps();
-        });
+        // Schema::create('isics', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name',255);
+        //     $table->string('isic')->nullable();
+        //     $table->string('national_unique_code')->nullable();
+        //     $table->timestamps();
+        // });
     }
 
     /**

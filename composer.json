@@ -30,7 +30,9 @@
             "Database\\Seeders\\": "database/seeders/",
             "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/",
             "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src/",
-            "Mkhodroo\\ValueChain\\": "packages/value-chains/src/"
+            "Mkhodroo\\ValueChain\\": "packages/value-chains/src/",
+            "Mkhodroo\\EventManager\\": "packages/event-manager/src/",
+            "BehinFindOldIsic\\": "packages/behin-find-old-isic/src/"
         }
     },
     "autoload-dev": {

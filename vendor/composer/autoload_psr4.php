@@ -63,6 +63,7 @@ return array(
     'Mockery\\' => array($vendorDir . '/mockery/mockery/library/Mockery'),
     'Mkhodroo\\ValueChain\\' => array($baseDir . '/packages/value-chains/src'),
     'Mkhodroo\\UserRoles\\' => array($baseDir . '/packages/mkhodroo-user-roles/src'),
+    'Mkhodroo\\EventManager\\' => array($baseDir . '/packages/event-manager/src'),
     'Mkhodroo\\Cities\\' => array($baseDir . '/packages/mkhodroo-cities/src'),
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
     'League\\Flysystem\\Local\\' => array($vendorDir . '/league/flysystem-local'),
@@ -97,5 +98,6 @@ return array(
     'Carbon\\Doctrine\\' => array($vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
+    'BehinFindOldIsic\\' => array($baseDir . '/packages/behin-find-old-isic/src'),
     'App\\' => array($baseDir . '/app', $vendorDir . '/laravel/pint/app'),
 );

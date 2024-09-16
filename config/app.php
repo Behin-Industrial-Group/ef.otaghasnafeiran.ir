@@ -1,5 +1,6 @@
 <?php
 
+use BehinFindOldIsic\PackageProviders;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -166,6 +167,9 @@ return [
         Mkhodroo\Cities\CityProvider::class,
         \Mkhodroo\UserRoles\UserRolesServiceProvider::class,
         \Mkhodroo\ValueChain\ValueChainProvider::class,
+        \Mkhodroo\EventManager\EventManagerProvider::class,
+        PackageProviders::class,
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

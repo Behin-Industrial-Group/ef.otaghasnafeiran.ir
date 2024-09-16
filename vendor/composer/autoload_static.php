@@ -124,6 +124,7 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
             'Mockery\\' => 8,
             'Mkhodroo\\ValueChain\\' => 20,
             'Mkhodroo\\UserRoles\\' => 19,
+            'Mkhodroo\\EventManager\\' => 22,
             'Mkhodroo\\Cities\\' => 16,
         ),
         'L' => 
@@ -182,6 +183,7 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'BehinFindOldIsic\\' => 17,
         ),
         'A' => 
         array (
@@ -419,6 +421,10 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src',
         ),
+        'Mkhodroo\\EventManager\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/event-manager/src',
+        ),
         'Mkhodroo\\Cities\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src',
@@ -559,6 +565,10 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'BehinFindOldIsic\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/behin-find-old-isic/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -609,6 +619,10 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'BehinFindOldIsic\\App\\Http\\Controllers\\BehinFindOldIsicController' => __DIR__ . '/../..' . '/packages/behin-find-old-isic/src/App/Http/Controllers/BehinFindOldIsicController.php',
+        'BehinFindOldIsic\\App\\Models\\Isic' => __DIR__ . '/../..' . '/packages/behin-find-old-isic/src/App/Models/Isic.php',
+        'BehinFindOldIsic\\App\\Models\\IsicComment' => __DIR__ . '/../..' . '/packages/behin-find-old-isic/src/App/Models/IsicComment.php',
+        'BehinFindOldIsic\\PackageProviders' => __DIR__ . '/../..' . '/packages/behin-find-old-isic/src/PackageProviders.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -3314,6 +3328,13 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'Mkhodroo\\Cities\\CityProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/CityProvider.php',
         'Mkhodroo\\Cities\\Controllers\\CityController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/CityController.php',
         'Mkhodroo\\Cities\\Models\\City' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Models/City.php',
+        'Mkhodroo\\EventManager\\Controllers\\EventController' => __DIR__ . '/../..' . '/packages/event-manager/src/Controllers/EventController.php',
+        'Mkhodroo\\EventManager\\Controllers\\ViewController' => __DIR__ . '/../..' . '/packages/event-manager/src/Controllers/ViewController.php',
+        'Mkhodroo\\EventManager\\EventManagerProvider' => __DIR__ . '/../..' . '/packages/event-manager/src/EventManagerProvider.php',
+        'Mkhodroo\\EventManager\\Models\\Event' => __DIR__ . '/../..' . '/packages/event-manager/src/Models/Event.php',
+        'Mkhodroo\\EventManager\\Models\\EventFile' => __DIR__ . '/../..' . '/packages/event-manager/src/Models/EventFile.php',
+        'Mkhodroo\\EventManager\\Models\\Meeting' => __DIR__ . '/../..' . '/packages/event-manager/src/Models/Meeting.php',
+        'Mkhodroo\\EventManager\\Models\\MeetingFile' => __DIR__ . '/../..' . '/packages/event-manager/src/Models/MeetingFile.php',
         'Mkhodroo\\UserRoles\\Controllers\\AccessController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/AccessController.php',
         'Mkhodroo\\UserRoles\\Controllers\\GetMethodsController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetMethodsController.php',
         'Mkhodroo\\UserRoles\\Controllers\\GetRoleController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetRoleController.php',
@@ -3324,6 +3345,7 @@ class ComposerStaticInite5a2968fcb3b586515626aeda51e5c9c
         'Mkhodroo\\UserRoles\\Models\\Method' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Method.php',
         'Mkhodroo\\UserRoles\\Models\\Role' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Role.php',
         'Mkhodroo\\UserRoles\\UserRolesServiceProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/UserRolesServiceProvider.php',
+        'Mkhodroo\\ValueChain\\Models\\Isic' => __DIR__ . '/../..' . '/packages/value-chains/src/Models/Isic.php',
         'Mkhodroo\\ValueChain\\ValueChainProvider' => __DIR__ . '/../..' . '/packages/value-chains/src/ValueChainProvider.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
