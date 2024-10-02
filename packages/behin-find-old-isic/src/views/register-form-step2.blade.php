@@ -10,52 +10,62 @@
             @include('isicView::partial.form-header')
 
             <!-- Form -->
-            <form class="" action="javascript:void(0)" id="registeration-form" dir="rtl">
-                <!-- Unique ID -->
+            <form class="" action="{{ route('isic.step2') }}" method="POST" id="registeration-form" dir="rtl">
+                <!-- Comment ID -->
                 <div class="mb-3">
-                    <input type="hidden" name="unique_id" class="form-control" id="unique_id"
-                        value="{{ $row->unique_id }}">
+                    <input type="hidden" name="comment_id" class="form-control" id="comment_id"
+                        value="{{ $comment->id }}">
                 </div>
 
 
-                <!-- Old Isic Code -->
-                <div class="mb-3">
-                    <label for="old_isic_code" class="form-label">{{ trans('old isic code') }}</label>
-                    <input type="text" value="{{ $row->old_isic_code }}" class="form-control" id="old_isic_code"
-                        readonly>
-                </div>
-
-                <!-- Old Isic Title -->
-                <div class="mb-3">
-                    <label for="old_isic_title" class="form-label">{{ trans('old isic title') }}</label>
-                    <input type="text" value="{{ $row->old_isic_title }}" class="form-control" id="old_isic_title"
-                        readonly>
-                </div>
-
-                <!-- New Isic Code -->
-                <div class="mb-3">
-                    <label for="new_isic_code" class="form-label">{{ trans('new isic code') }}</label>
-                    <input type="number" value="{{ $row->code . $row->_1 }}" class="form-control" id="new_isic_code"
-                        readonly>
-                </div>
-
-
-                @for ($i = 1; $i < 6; $i++)
-                    @php
-                        $var = 'level' . $i;
-                    @endphp
-                    <!-- Level {{ $i }} -->
-
-                    <div class="mb-3 ">
-                        <label for="level{{ $i }}" class="form-label">{{ trans('level ' . $i) }}</label>
-                        <p class="form-control">{{ $row->$var }}</p>
+                @if ($row)
+                    <p class="alert alert-warning" dir="rtl">
+                        کد آیسیک شما به شماره: {{ $row->old_isic_code }} با عنوان: {{ $row->old_isic_title }} به کد زیر
+                        تغییر
+                        کرد.
+                    </p>
+                    <!-- New Isic Code -->
+                    <div class="mb-3">
+                        <label for="new_isic_code" class="form-label">{{ trans('new isic code') }}</label>
+                        <input type="number" value="{{ $row->code . $row->_1 }}" class="form-control" id="new_isic_code"
+                            readonly>
                     </div>
-                @endfor
+
+                    <!-- New Isic title -->
+                    <div class="mb-3">
+                        <label for="new_isic_title" class="form-label">{{ trans('new isic title') }}</label>
+                        <input value="{{ $row->level5 }}" class="form-control" id="new_isic_title" readonly>
+                    </div>
+
+
+                    @for ($i = 1; $i < 6; $i++)
+                        @php
+                            $var = 'level' . $i;
+                        @endphp
+                        <!-- Level {{ $i }} -->
+
+                        <div class="mb-3 ">
+                            <label for="level{{ $i }}" class="form-label">{{ trans('level ' . $i) }}</label>
+                            <p class="form-control">{{ $row->$var }}</p>
+                        </div>
+                    @endfor
+                @else
+                    <p class="alert alert-danger" dir="rtl">
+                        کد آیسیک شما یافت نشد.
+                    </p>
+                @endif
+
+
+                <!-- Comment -->
+                <div class="mb-3">
+                    <label for="comment" class="form-label">{{ trans('comment') }}</label>
+                    <textarea name="comment" rows="9" class="form-control" id="comment"></textarea>
+                </div>
 
 
                 <!-- Submit Button -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" onclick="submit_form()">{{ trans('leave a comment') }}</button>
+                    <button type="submit" class="btn btn-primary" onclick="">{{ trans('leave a comment') }}</button>
                 </div>
             </form>
         </div>

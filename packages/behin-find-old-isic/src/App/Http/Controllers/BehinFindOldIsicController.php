@@ -21,8 +21,22 @@ class BehinFindOldIsicController extends Controller
         return Isic::where('old_isic_code', $old_isic_code)->first();
     }
 
+    function step0Form()
+    {
+        return view("isicView::step0");
+    }
+
+    function step0()
+    {
+        return response()->json([
+            'status' => 200,
+            'url' => route("isic.step1Form")
+        ]);
+    }
+
     function step1Form()
     {
+        return view("isicView::register-form-step1");
         return view("isicView::register-form");
     }
 
@@ -31,12 +45,20 @@ class BehinFindOldIsicController extends Controller
         $request->validate([
             'old_isic_code' => 'required',
         ]);
+        $data = $request->all();
+        $comment = IsicComment::create($data);
+
+
         $row = $this->getByOldIsicCode($request->old_isic_code);
+        return view('isicView::register-form-step2', [
+            'row' => $row,
+            'comment' => $comment
+        ]);
 
         if ($row) {
             return response()->json([
                 'status' => 200,
-                'url' => route("isic.step2Form", ['unique_id' => $row['unique_id']])
+                'url' => route("isic.step2Form", ['row' => $row['unique_id']])
             ]);
         }
         return response(trans("Not Found"), 402);
@@ -53,9 +75,14 @@ class BehinFindOldIsicController extends Controller
     public function step2(Request $request)
     {
         $request->validate([
-            'unique_id' => 'required',
+            'comment_id' => 'required',
         ]);
         $row = $this->getByUniqueID($request->unique_id);
+        $comment = IsicComment::find($request->comment_id);
+        $comment->comment = $request->comment;
+        $comment->save();
+        return view('isicView::finish');
+
 
         if (!$row) {
             return response(trans("Error"), 500);

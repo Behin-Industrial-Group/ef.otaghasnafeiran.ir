@@ -4,12 +4,17 @@
     "old isic title":"عنوان آیسیک قدیم",
     "new isic title":"عنوان آیسیک جدید",
     "level 1":"سطح اول",
-    "level 2":"سطوم دوم",
+    "level 2":"سطح دوم",
     "level 3":"سطح سوم",
     "level 4":"سطح چهارم",
     "level 5":"سطح پنجم",
     "leave a comment":"ثبت نظر",
     "Not Found":"یافت نشد",
     "Enter old code isic": "کد آیسیک قدیمی را وارد کنید",
-    "Thanks for contributing": "با تشکر از مشارکت شما"
+    "Thanks for contributing": "با تشکر از مشارکت شما",
+    "fullname": "نام و نام خانوادگی",
+    "union_name": "نام اتحادیه",
+    "type": "نوع واحد صنفی",
+    "city": "شهر و استان",
+    "comment": "نظر / پیشنهاد"
 }

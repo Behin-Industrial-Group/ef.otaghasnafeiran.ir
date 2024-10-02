@@ -11,6 +11,10 @@ class IsicComment extends Model
         'isic_id',
         'fullname',
         'mobile',
-        'comment'
+        'comment',
+        'union_name',
+        'city',
+        'type',
+        'old_isic_code'
     ];
 }
