@@ -43,6 +43,11 @@ class BehinFindOldIsicController extends Controller
     function step1(Request $request)
     {
         $request->validate([
+            'fullname' => 'required',
+            'mobile' => 'required',
+            'union_name' => 'required',
+            'city' => 'required',
+            'type' => 'required',
             'old_isic_code' => 'required',
         ]);
         $data = $request->all();
