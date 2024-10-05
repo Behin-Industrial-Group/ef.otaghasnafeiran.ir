@@ -153,8 +153,13 @@ Route::get('/import-user', function () {
     });
 });
 
-Route::get('/build-app', function () {
+Route::get('build-app', function(){
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('view:clear');
     Artisan::call('migrate');
+    return redirect()->back();
+    return 'done';
 });
 
 Route::get('/', function () {

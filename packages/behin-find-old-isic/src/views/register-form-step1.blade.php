@@ -10,6 +10,16 @@
 
             <!-- Form -->
             <form class="" action="{{ route('isic.step1') }}" method="POST" id="registeration-form" dir="rtl">
+                @csrf
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                {{ $error }} <br>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <!-- Full Name -->
                 <div class="mb-3">
                     <label for="fullname" class="form-label">{{ trans('fullname') }}</label>
@@ -29,7 +39,7 @@
 
                 <!-- City Name -->
                 <div class="mb-3">
-                    <label for="city" class="form-label">{{ trans('city') }}</label>
+                    <label for="city" class="form-label">{{ trans('ptovince & city') }}</label>
                     <input type="text" name="city" class="form-control" id="city">
                 </div>
 
@@ -58,7 +68,7 @@
 
                 <!-- Submit Button -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" >{{ trans('submit') }}</button>
+                    <button type="submit" class="btn btn-primary">{{ trans('submit') }}</button>
                 </div>
             </form>
         </div>

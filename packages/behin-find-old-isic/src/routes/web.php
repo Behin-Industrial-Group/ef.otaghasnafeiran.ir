@@ -3,7 +3,7 @@
 use BehinFindOldIsic\App\Http\Controllers\BehinFindOldIsicController;
 use Illuminate\Support\Facades\Route;
 
-Route::name('isic.')->prefix('isic')->group(function(){
+Route::name('isic.')->prefix('isic')->middleware('web')->group(function(){
     Route::get('/step0', [BehinFindOldIsicController::class, 'step0Form'])->name('step0Form');
     Route::post('/step0', [BehinFindOldIsicController::class, 'step0'])->name('step0');
 
