@@ -68,7 +68,7 @@
 
                 <!-- Submit Button -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">{{ trans('submit') }}</button>
+                    <button type="submit" class="btn btn-primary">بعدی</button>
                 </div>
             </form>
         </div>
