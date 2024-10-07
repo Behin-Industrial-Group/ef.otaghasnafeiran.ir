@@ -11,6 +11,7 @@
 
             <!-- Form -->
             <form class="" action="{{ route('isic.step2') }}" method="POST" id="registeration-form" dir="rtl">
+                @csrf
                 <!-- Comment ID -->
                 <div class="mb-3">
                     <input type="hidden" name="comment_id" class="form-control" id="comment_id"
